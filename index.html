@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack Pitts · Salt Creek Advisory · HelmIQ · The Making Of Hosted By Jack Pitts</title>
+<meta name="description" content="Jack Pitts sells family-owned companies at Salt Creek Advisory, builds HelmIQ, and hosts The Making Of Hosted By Jack Pitts. Chicago kid, Vanderbilt grad, New York reps, heading back home.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f1ea;
+    --paper-deep:#ece7da;
+    --ink:#0e0d0a;
+    --ink-soft:#4a463c;
+    --peri:#7b8fe4;
+    --peri-deep:#5a72d8;
+    --navy:#1f3050;
+    --orange:#d87a2c;
+    --hairline:rgba(14,13,10,.16);
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Inter',-apple-system,sans-serif;
+    --mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body::after{
+    content:"";position:fixed;inset:0;z-index:300;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  body{
+    background:var(--paper);color:var(--ink);
+    font-family:var(--sans);line-height:1.7;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    transition:background .6s ease, color .6s ease;
+  }
+  ::selection{background:var(--peri);color:var(--paper)}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 32px}
+
+  body[data-theme="firm"]{background:var(--navy);color:var(--paper)}
+  body[data-theme="machine"]{background:#0b0c10;color:#f4f1ea}
+  body[data-theme="show"]{background:#f3e8cf;color:#14130f}
+  body[data-theme="contact"]{background:var(--ink);color:var(--paper)}
+
+  /* ================= NAV ================= */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:80;
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--hairline);
+    background:color-mix(in srgb, var(--paper) 84%, transparent);
+    transition:background .6s ease, border-color .6s ease;
+  }
+  body[data-theme="firm"] nav{background:rgba(31,48,80,.84);border-color:rgba(244,241,234,.16)}
+  body[data-theme="machine"] nav{background:rgba(11,12,16,.84);border-color:rgba(244,241,234,.14)}
+  body[data-theme="show"] nav{background:rgba(243,232,207,.86);border-color:rgba(20,19,15,.14)}
+  body[data-theme="contact"] nav{background:rgba(14,13,10,.84);border-color:rgba(244,241,234,.14)}
+  .nav-top{
+    max-width:1140px;margin:0 auto;padding:14px 32px 10px;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+  }
+  .brand{
+    font-family:var(--serif);font-weight:600;font-size:1.05rem;
+    letter-spacing:.01em;white-space:nowrap;cursor:pointer;
+    background:none;border:none;color:inherit;
+  }
+  .brand i{font-style:italic;color:var(--peri)}
+  body[data-theme="show"] .brand i{color:var(--orange)}
+  .book-mini{
+    text-decoration:none;font-family:var(--mono);font-size:.66rem;
+    letter-spacing:.18em;text-transform:uppercase;
+    border:1px solid currentColor;padding:8px 16px;border-radius:2px;
+    transition:all .2s;white-space:nowrap;
+  }
+  .book-mini:hover{background:var(--peri);border-color:var(--peri);color:#fff}
+  .tabs{
+    max-width:1140px;margin:0 auto;padding:0 24px;
+    display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;
+  }
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{
+    background:none;border:none;cursor:pointer;color:inherit;
+    font-family:var(--mono);font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;
+    padding:12px 13px 14px;position:relative;white-space:nowrap;opacity:.55;
+    transition:opacity .2s;
+  }
+  .tab:hover{opacity:1}
+  .tab.active{opacity:1}
+  .tab .no{color:var(--peri);margin-right:7px}
+  body[data-theme="show"] .tab .no{color:var(--orange)}
+  .tab::after{
+    content:"";position:absolute;left:13px;right:13px;bottom:0;height:2px;
+    background:currentColor;transform:scaleX(0);transform-origin:left;
+    transition:transform .35s cubic-bezier(.7,0,.2,1);
+  }
+  .tab.active::after{transform:scaleX(1)}
+
+  /* ================= WIPE ================= */
+  #wipe{
+    position:fixed;inset:0;z-index:200;pointer-events:none;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;
+    background:var(--ink);color:var(--paper);
+    clip-path:inset(100% 0 0 0);
+  }
+  #wipe.go{animation:wipeUp 1s cubic-bezier(.76,0,.24,1) forwards}
+  @keyframes wipeUp{
+    0%{clip-path:inset(100% 0 0 0)}
+    42%{clip-path:inset(0 0 0 0)}
+    58%{clip-path:inset(0 0 0 0)}
+    100%{clip-path:inset(0 0 100% 0)}
+  }
+  #wipe .w-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--peri)}
+  #wipe .w-title{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.8rem,4.5vw,3.2rem);text-align:center;padding:0 20px}
+
+  /* ================= PAGES ================= */
+  .page{display:none;min-height:100svh;padding:158px 0 90px;position:relative}
+  .page.active{display:block}
+  .rise{opacity:0;transform:translateY(34px)}
+  .page.active .rise{animation:rise .9s cubic-bezier(.2,.65,.25,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .page.active .rise.d1{animation-delay:.08s}
+  .page.active .rise.d2{animation-delay:.16s}
+  .page.active .rise.d3{animation-delay:.24s}
+  .page.active .rise.d4{animation-delay:.34s}
+  .page.active .rise.d5{animation-delay:.44s}
+  .page.active .rise.d6{animation-delay:.54s}
+
+  .eyebrow{
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--peri);margin-bottom:30px;display:flex;align-items:center;gap:16px;
+  }
+  .eyebrow::after{content:"";width:54px;height:1px;background:currentColor;opacity:.5}
+  body[data-theme="show"] .eyebrow{color:var(--orange)}
+  h1,h2.display{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(2.4rem,6.2vw,4.8rem);
+    line-height:1.05;letter-spacing:-.02em;max-width:15em;
+  }
+  h1 b,h2.display b{font-weight:700}
+  h1 em,h2.display em{font-style:italic;font-weight:400;color:var(--peri)}
+  body[data-theme="show"] h1 em, body[data-theme="show"] h2.display em{color:var(--orange)}
+  .prose{font-size:1.04rem;max-width:39em;opacity:.8}
+  .prose+.prose{margin-top:16px}
+  .prose strong{opacity:1;font-weight:600}
+
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:600;font-size:.9rem;
+    padding:14px 30px;border-radius:2px;letter-spacing:.02em;
+    background:var(--ink);color:var(--paper);border:none;cursor:pointer;font-family:var(--sans);
+    transition:transform .2s, box-shadow .2s, background .2s, color .2s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(14,13,10,.25)}
+  .btn.peri{background:var(--peri-deep);color:#fff}
+  .btn.peri:hover{background:var(--peri)}
+  .btn.ghost{background:transparent;color:inherit;border:1px solid currentColor}
+  .btn.ghost:hover{box-shadow:none;background:rgba(127,127,127,.12)}
+  body[data-theme="firm"] .btn{background:var(--paper);color:var(--navy)}
+  body[data-theme="machine"] .btn{background:var(--peri);color:#0b0c10}
+  body[data-theme="machine"] .btn:hover{background:#94a5ef}
+  body[data-theme="show"] .btn{background:var(--orange);color:#f3e8cf}
+  body[data-theme="contact"] .btn{background:var(--peri);color:#0b0c10}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:42px}
+
+  /* ---------- HOME ---------- */
+  .home-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+  @media(max-width:880px){.home-grid{grid-template-columns:1fr;gap:48px}}
+  .headshot{position:relative;max-width:380px;margin-left:auto;display:block;text-decoration:none;perspective:900px}
+  .headshot img{width:100%;display:block;filter:grayscale(15%);border:1px solid var(--hairline);transition:transform .2s ease;will-change:transform}
+  .headshot .hi{
+    position:absolute;top:16px;right:-14px;z-index:2;
+    background:var(--peri-deep);color:#fff;
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+    padding:10px 16px;opacity:0;transform:translateY(-8px);
+    transition:opacity .25s, transform .25s;pointer-events:none;
+  }
+  .headshot:hover .hi{opacity:1;transform:none}
+  .headshot::before{
+    content:"";position:absolute;inset:0;transform:translate(16px,16px);
+    border:1px solid var(--peri);z-index:-1;
+  }
+  .headshot .tag{
+    position:absolute;left:-14px;bottom:26px;background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+    padding:10px 16px;
+  }
+  .headshot .tag i{color:var(--peri);font-style:normal}
+  @media(max-width:880px){.headshot{margin:0 auto}}
+
+  .marquee{
+    margin-top:84px;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);
+    padding:16px 0;overflow:hidden;white-space:nowrap;
+  }
+  .marquee-track{display:inline-block;animation:mq 36s linear infinite}
+  .marquee span{
+    font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.05rem;
+    margin:0 30px;opacity:.85;
+  }
+  .marquee b{color:var(--peri);font-style:normal;font-family:var(--mono);font-size:.6rem;vertical-align:middle}
+  @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .chapter-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin-top:84px}
+  @media(max-width:980px){.chapter-cards{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.chapter-cards{grid-template-columns:1fr}}
+  .cc{
+    background:var(--paper);padding:34px 28px 44px;cursor:pointer;text-align:left;
+    border:none;font-family:var(--sans);color:var(--ink);
+    transition:background .25s;position:relative;overflow:hidden;
+  }
+  .cc::after{
+    content:"→";position:absolute;right:24px;bottom:18px;
+    font-size:1.15rem;color:var(--peri);
+    transform:translateX(-12px);opacity:0;transition:all .25s;
+  }
+  .cc:hover{background:var(--paper-deep)}
+  .cc:hover::after{transform:none;opacity:1}
+  .cc .cc-no{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--peri)}
+  .cc h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin:13px 0 7px}
+  .cc p{font-size:.88rem;color:var(--ink-soft)}
+
+  /* ---------- ROAD (timeline) ---------- */
+  .timeline{position:relative;margin-top:80px;padding-left:46px;max-width:760px}
+  .timeline::before{
+    content:"";position:absolute;left:8px;top:6px;bottom:6px;width:1px;
+    background:var(--hairline);transform:scaleY(0);transform-origin:top;
+  }
+  .page.active .timeline::before{animation:draw 1.6s cubic-bezier(.2,.65,.25,1) .3s forwards}
+  @keyframes draw{to{transform:scaleY(1)}}
+  .stop{position:relative;padding-bottom:56px}
+  .stop:last-child{padding-bottom:0}
+  .stop::before{
+    content:"";position:absolute;left:-43px;top:9px;width:11px;height:11px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--peri);
+    transform:scale(0);
+  }
+  .page.active .stop::before{animation:pop .45s cubic-bezier(.3,1.6,.5,1) forwards}
+  .page.active .stop:nth-child(1)::before{animation-delay:.45s}
+  .page.active .stop:nth-child(2)::before{animation-delay:.7s}
+  .page.active .stop:nth-child(3)::before{animation-delay:.95s}
+  .page.active .stop:nth-child(4)::before{animation-delay:1.2s}
+  .page.active .stop:nth-child(5)::before{animation-delay:1.45s}
+  @keyframes pop{to{transform:scale(1)}}
+  .stop .when{font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--peri)}
+  .stop h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin:8px 0 8px;letter-spacing:-.01em}
+  .stop h3 em{font-style:italic;font-weight:300}
+  .stop p{font-size:.99rem;color:var(--ink-soft);max-width:36em}
+  .stop.here::before{background:var(--peri)}
+
+  .skyline{margin-top:80px;display:flex;align-items:flex-end;gap:6px;height:110px;opacity:.9}
+  .skyline i{flex:1;background:currentColor;opacity:.13;display:block;transform:scaleY(0);transform-origin:bottom}
+  .page.active .skyline i{animation:building .8s cubic-bezier(.2,.65,.25,1) forwards}
+  @keyframes building{to{transform:scaleY(1)}}
+
+  /* ---------- shared chapter layout ---------- */
+  .ch-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:76px;align-items:start;margin-top:64px}
+  @media(max-width:880px){.ch-grid{grid-template-columns:1fr;gap:44px}}
+  .logo-card{border:1px solid currentColor;padding:50px 42px;text-align:center;position:relative}
+  .logo-card img{max-width:100%;display:block;margin:0 auto}
+  .logo-card a{display:block;transition:transform .25s}
+  .logo-card a:hover{transform:scale(1.03)}
+  .logo-card .visit{
+    display:inline-block;margin-top:22px;font-family:var(--mono);font-size:.62rem;
+    letter-spacing:.2em;text-transform:uppercase;text-decoration:none;
+    color:var(--peri);border-bottom:1px solid var(--peri);padding-bottom:3px;
+  }
+  body[data-theme="show"] .logo-card .visit{color:var(--orange);border-color:var(--orange)}
+  body[data-theme="firm"] .logo-card .visit{color:var(--navy);border-color:var(--navy)}
+  .logo-card::before{content:"";position:absolute;top:-1px;left:-1px;width:30px;height:30px;border-top:3px solid var(--peri);border-left:3px solid var(--peri)}
+  .logo-card::after{content:"";position:absolute;bottom:-1px;right:-1px;width:30px;height:30px;border-bottom:3px solid var(--peri);border-right:3px solid var(--peri)}
+  .facts{list-style:none;margin-top:34px;border-top:1px solid currentColor}
+  .facts li{
+    display:flex;justify-content:space-between;gap:22px;align-items:baseline;
+    padding:14px 2px;border-bottom:1px solid currentColor;font-size:.93rem;
+  }
+  .facts .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;opacity:.55;flex-shrink:0}
+  .facts .v{text-align:right}
+  .pullq{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:clamp(1.35rem,2.3vw,1.8rem);line-height:1.42;
+    border-left:1px solid var(--peri);padding-left:28px;margin-top:44px;
+  }
+  body[data-theme="show"] .pullq{border-color:var(--orange)}
+  .pullq small{
+    display:block;font-family:var(--mono);font-style:normal;font-size:.62rem;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--peri);margin-top:18px;
+  }
+  body[data-theme="show"] .pullq small{color:var(--orange)}
+
+  body[data-theme="firm"] .facts li{border-color:rgba(244,241,234,.18)}
+  body[data-theme="firm"] .facts{border-color:rgba(244,241,234,.18)}
+  body[data-theme="firm"] .logo-card{border-color:rgba(244,241,234,.22);background:var(--paper)}
+  body[data-theme="machine"] .facts li{border-color:rgba(244,241,234,.16)}
+  body[data-theme="machine"] .facts{border-color:rgba(244,241,234,.16)}
+  body[data-theme="machine"] .logo-card{border-color:rgba(244,241,234,.2);background:#07080b}
+  body[data-theme="show"] .facts li{border-color:rgba(20,19,15,.16)}
+  body[data-theme="show"] .facts{border-color:rgba(20,19,15,.16)}
+  body[data-theme="show"] .logo-card{border-color:rgba(20,19,15,.2)}
+  body[data-theme="show"] .logo-card::before,body[data-theme="show"] .logo-card::after{border-color:var(--orange)}
+
+  /* machine pipeline */
+  .pipeline{margin-top:70px;border:1px solid rgba(244,241,234,.16);display:grid;grid-template-columns:repeat(4,1fr)}
+  .pipeline>div{padding:28px 26px;border-right:1px solid rgba(244,241,234,.16);position:relative;overflow:hidden}
+  .pipeline>div:last-child{border-right:none}
+  .pipeline>div::before{
+    content:"";position:absolute;left:0;top:0;height:2px;width:100%;
+    background:var(--peri);transform:scaleX(0);transform-origin:left;transition:transform .5s;
+  }
+  .pipeline>div:hover::before{transform:scaleX(1)}
+  .pl-n{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;color:var(--peri);text-transform:uppercase}
+  .pl-t{font-family:var(--serif);font-size:1.25rem;margin-top:10px}
+  .pl-d{font-size:.85rem;opacity:.65;margin-top:6px}
+  @media(max-width:880px){.pipeline{grid-template-columns:1fr 1fr}.pipeline>div{border-bottom:1px solid rgba(244,241,234,.16)}}
+  @media(max-width:520px){.pipeline{grid-template-columns:1fr}}
+
+  /* show listen rows */
+  .listen{list-style:none;margin-top:38px;border-top:1px solid rgba(20,19,15,.16)}
+  .listen a{
+    display:flex;justify-content:space-between;align-items:center;gap:18px;
+    padding:18px 6px;border-bottom:1px solid rgba(20,19,15,.16);
+    text-decoration:none;transition:all .22s;
+  }
+  .listen a:hover{padding-left:18px;background:rgba(216,122,44,.08)}
+  .listen .pl-name{font-family:var(--serif);font-size:1.18rem}
+  .listen .pl-go{font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+
+  .pmop{
+    margin-top:80px;border:1px solid rgba(20,19,15,.18);
+    display:grid;grid-template-columns:.8fr 1.2fr;gap:0;align-items:center;
+    background:#faf6ec;
+  }
+  .pmop .pm-logo{padding:40px 36px;border-right:1px solid rgba(20,19,15,.14)}
+  .pmop .pm-logo img{max-width:100%;display:block}
+  .pmop .pm-body{padding:40px 38px}
+  .pmop h3{font-family:var(--serif);font-weight:600;font-size:1.45rem;margin-bottom:10px}
+  .pmop p{font-size:.95rem;color:var(--ink-soft);max-width:34em}
+  @media(max-width:760px){.pmop{grid-template-columns:1fr}.pmop .pm-logo{border-right:none;border-bottom:1px solid rgba(20,19,15,.14)}}
+
+  /* newsletter */
+  .news{
+    margin-top:74px;border:1px solid rgba(244,241,234,.2);
+    padding:50px 46px;position:relative;
+    display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center;
+  }
+  .news::before{content:"";position:absolute;top:-1px;left:-1px;width:30px;height:30px;border-top:3px solid var(--peri);border-left:3px solid var(--peri)}
+  .news::after{content:"";position:absolute;bottom:-1px;right:-1px;width:30px;height:30px;border-bottom:3px solid var(--peri);border-right:3px solid var(--peri)}
+  .news .n-label{font-family:var(--mono);font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--peri)}
+  .news h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);margin:12px 0 12px;line-height:1.15}
+  .news h3 em{font-style:italic;font-weight:300;color:var(--peri)}
+  .news p{font-size:.97rem;opacity:.75;max-width:34em}
+  .news .n-side{display:flex;flex-direction:column;gap:12px}
+  @media(max-width:760px){.news{grid-template-columns:1fr;padding:38px 30px}}
+
+  /* contact */
+  .ep-mails{
+    margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:1px;
+    background:rgba(244,241,234,.16);border:1px solid rgba(244,241,234,.16);
+  }
+  .ep-mails a{padding:30px 26px;text-decoration:none;background:var(--ink);transition:background .2s;display:block}
+  .ep-mails a:hover{background:#1c1a14}
+  .ep-mails .em-l{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;opacity:.5}
+  .ep-mails .em-v{font-family:var(--serif);font-size:1.2rem;margin-top:10px}
+  .ep-mails a:hover .em-v{color:var(--peri)}
+  @media(max-width:640px){.ep-mails{grid-template-columns:1fr}}
+  .index-links{
+    margin-top:70px;border-top:1px solid rgba(244,241,234,.16);padding-top:36px;
+    display:flex;gap:14px 34px;flex-wrap:wrap;
+  }
+  .index-links a{
+    font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+    text-decoration:none;opacity:.6;transition:opacity .2s,color .2s;
+  }
+  .index-links a:hover{opacity:1;color:var(--peri)}
+
+  #counter{
+    position:fixed;right:26px;bottom:22px;z-index:90;
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;opacity:.55;
+    display:flex;align-items:center;gap:14px;pointer-events:none;
+  }
+  #counter .keys{opacity:.7}
+  @media(max-width:760px){#counter{display:none}}
+
+  footer{
+    border-top:1px solid var(--hairline);padding:26px 0;
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;opacity:.55;
+  }
+  body[data-theme="firm"] footer,body[data-theme="machine"] footer,body[data-theme="contact"] footer{border-color:rgba(244,241,234,.14)}
+  .foot-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body data-theme="home">
+
+<div id="wipe"><div class="w-label" id="wipeLabel"></div><div class="w-title" id="wipeTitle"></div></div>
+
+<nav>
+  <div class="nav-top">
+    <button class="brand" data-go="home">Jack Pitts<i>.</i></button>
+    <a class="book-mini" href="https://helmiq.net/book/jack-pitts" target="_blank" rel="noopener">Book time ↗</a>
+  </div>
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-go="home"><span class="no">00</span>Prologue</button>
+    <button class="tab" data-go="road"><span class="no">01</span>The Road</button>
+    <button class="tab" data-go="firm"><span class="no">02</span>Salt Creek Advisory</button>
+    <button class="tab" data-go="machine"><span class="no">03</span>HelmIQ</button>
+    <button class="tab" data-go="show"><span class="no">04</span>The Making Of Hosted By Jack Pitts</button>
+    <button class="tab" data-go="contact"><span class="no">05</span>Your Move</button>
+  </div>
+</nav>
+
+<!-- ================= 00 PROLOGUE ================= -->
+<main class="page active" id="pg-home">
+  <div class="wrap">
+    <div class="home-grid">
+      <div>
+        <p class="eyebrow rise">Prologue · Jack Pitts</p>
+        <h1 class="rise d1">Every company has a <em>making of.</em><br>Here's mine, so far.</h1>
+        <p class="prose rise d2" style="margin-top:34px">Chicago kid. Vanderbilt grad. Started out in private equity in New York, then went and built my own things: Salt Creek Advisory, an M&amp;A firm my brother and I run for family-owned businesses, and HelmIQ, software that came straight out of running those deals.</p>
+        <p class="prose rise d3">I also host The Making Of Hosted By Jack Pitts, because I like asking people how they built what they built. I'm young, I don't pretend to know it all, and I'm spending my twenties at the front of AI and technology. Next part gets written back home in Chicago.</p>
+        <div class="ctas rise d4">
+          <a class="btn peri" href="https://helmiq.net/book/jack-pitts" target="_blank" rel="noopener">Book time with me</a>
+          <button class="btn ghost" data-go="road">Start from the beginning</button>
+        </div>
+      </div>
+      <a class="headshot rise d2" href="https://www.linkedin.com/in/jack-pitts" target="_blank" rel="noopener" id="headshot">
+        <div class="hi">Hey, that's my LinkedIn ↗</div>
+        <img src="assets/headshot.jpg" alt="Jack Pitts headshot, click to open LinkedIn" id="headshotImg">
+        <div class="tag">Jack Pitts · <i>CHI → NSH → NYC → CHI</i></div>
+      </a>
+    </div>
+
+    <div class="marquee rise d4" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Salt Creek Advisory <b>●</b></span><span>HelmIQ <b>●</b></span><span>The Making Of Hosted By Jack Pitts <b>●</b></span><span>Private Markets Origination Professionals <b>●</b></span><span>Family-owned businesses <b>●</b></span><span>Chicago, eventually and always <b>●</b></span>
+        <span>Salt Creek Advisory <b>●</b></span><span>HelmIQ <b>●</b></span><span>The Making Of Hosted By Jack Pitts <b>●</b></span><span>Private Markets Origination Professionals <b>●</b></span><span>Family-owned businesses <b>●</b></span><span>Chicago, eventually and always <b>●</b></span>
+      </div>
+    </div>
+
+    <div class="chapter-cards rise d5">
+      <button class="cc" data-go="road">
+        <div class="cc-no">Chapter 01</div>
+        <h3>The Road</h3>
+        <p>Chicago to Nashville to London to New York. How I got here.</p>
+      </button>
+      <button class="cc" data-go="firm">
+        <div class="cc-no">Chapter 02</div>
+        <h3>The Firm</h3>
+        <p>Salt Creek Advisory. Two brothers selling family-owned businesses the right way.</p>
+      </button>
+      <button class="cc" data-go="machine">
+        <div class="cc-no">Chapter 03</div>
+        <h3>The Machine</h3>
+        <p>HelmIQ. The system that runs in the background so dealmakers can do deals.</p>
+      </button>
+      <button class="cc" data-go="show">
+        <div class="cc-no">Chapter 04</div>
+        <h3>The Mic</h3>
+        <p>The Making Of Hosted By Jack Pitts, plus a community built around sourcing.</p>
+      </button>
+    </div>
+  </div>
+</main>
+
+<!-- ================= 01 THE ROAD ================= -->
+<main class="page" id="pg-road">
+  <div class="wrap">
+    <p class="eyebrow rise">Chapter 01 · The Road</p>
+    <h2 class="display rise d1">Chicago raised me. <em>The rest of it trained me.</em></h2>
+    <div class="timeline rise d2">
+      <div class="stop">
+        <div class="when">Chicago · The Start</div>
+        <h3>Grew up here.</h3>
+        <p>Everything I like about how I work comes from home. Show up, be useful, don't make it about you.</p>
+      </div>
+      <div class="stop">
+        <div class="when">Nashville · Vanderbilt</div>
+        <h3>Vandy, <em>class of May 2025.</em></h3>
+        <p>Studied Human and Organizational Development. Honest review: the classroom taught me a little, the people taught me a lot. I also started a nonprofit called Trash Troopers. It's exactly what it sounds like, and I'm still proud of it.</p>
+      </div>
+      <div class="stop">
+        <div class="when">London · Four Months</div>
+        <h3>Lived in London.</h3>
+        <p>Four months there, and I loved it more than I expected to. Different pace, different rooms, same lesson: get out of your bubble and talk to people. I still look for excuses to go back.</p>
+      </div>
+      <div class="stop">
+        <div class="when">New York · Private Equity</div>
+        <h3>Blue Wolf Capital, Coastal Partners, <em>then Kingfish Group.</em></h3>
+        <p>Private equity taught me how deals actually move. It also taught me the bigger lesson, sitting across the table: the owners were the ones building the real wealth. I didn't want to watch that from the fund side. I wanted to build my own things, better myself, and meet as many sharp people as I could. That's where Salt Creek Advisory and HelmIQ come from.</p>
+      </div>
+      <div class="stop here">
+        <div class="when">Chicago · Now</div>
+        <h3>Back home, <em>figuring it out.</em></h3>
+        <p>No script for this part, and I'm not pretending there is one. I'm young. I know how much I don't know. So the plan is simple: ask a lot of questions, break things, build them back better, and keep myself at the front of what AI and technology can do. Salt Creek Advisory and HelmIQ, run from the city I know best.</p>
+      </div>
+    </div>
+    <div class="skyline rise d4" aria-hidden="true">
+      <i style="height:34%;animation-delay:.05s"></i><i style="height:58%;animation-delay:.1s"></i><i style="height:42%;animation-delay:.15s"></i><i style="height:88%;animation-delay:.2s"></i><i style="height:64%;animation-delay:.25s"></i><i style="height:100%;animation-delay:.3s"></i><i style="height:52%;animation-delay:.35s"></i><i style="height:76%;animation-delay:.4s"></i><i style="height:40%;animation-delay:.45s"></i><i style="height:94%;animation-delay:.5s"></i><i style="height:60%;animation-delay:.55s"></i><i style="height:30%;animation-delay:.6s"></i><i style="height:70%;animation-delay:.65s"></i><i style="height:46%;animation-delay:.7s"></i><i style="height:82%;animation-delay:.75s"></i><i style="height:36%;animation-delay:.8s"></i>
+    </div>
+    <div class="ctas rise d5">
+      <button class="btn" data-go="firm">Next chapter: the firm →</button>
+    </div>
+  </div>
+</main>
+
+<!-- ================= 02 FIRM ================= -->
+<main class="page" id="pg-firm">
+  <div class="wrap">
+    <p class="eyebrow rise">Chapter 02 · The Firm · New York City</p>
+    <h2 class="display rise d1">Somebody spent thirty years building it.<br><em>The sale gets one shot.</em></h2>
+    <div class="ch-grid">
+      <div>
+        <p class="prose rise d2">Salt Creek Advisory is the M&amp;A firm my brother and I run. We represent family-owned and founder-owned businesses in the lower middle market, and we're a family business ourselves. That's the whole model: the people you meet on the first call are the people who close your deal.</p>
+        <p class="prose rise d3">Sell-side representation. Buyer development across strategics, family offices, and private equity. A process built around the owner, not around a banker's calendar.</p>
+        <p class="prose rise d3">No handoffs. No junior team. No autopilot.</p>
+        <div class="ctas rise d4">
+          <a class="btn" href="https://saltcreekadvisory.com" target="_blank" rel="noopener">Visit saltcreekadvisory.com</a>
+          <a class="btn ghost" href="mailto:jack@saltcreekadvisory.com">jack@saltcreekadvisory.com</a>
+          <a class="btn ghost" href="https://helmiq.net/book/jack-pitts" target="_blank" rel="noopener">Talk about a deal</a>
+        </div>
+        <div class="pullq rise d5">"A family business that sells family businesses."
+          <small>Salt Creek Advisory</small>
+        </div>
+      </div>
+      <div>
+        <div class="logo-card rise d2">
+          <a href="https://saltcreekadvisory.com" target="_blank" rel="noopener"><img src="assets/saltcreek-logo.png" alt="Salt Creek Advisory logo" style="max-width:320px"></a>
+          <a class="visit" href="https://saltcreekadvisory.com" target="_blank" rel="noopener">saltcreekadvisory.com ↗</a>
+        </div>
+        <ul class="facts rise d3">
+          <li><span class="k">What</span><span class="v">Sell-side M&amp;A advisory</span></li>
+          <li><span class="k">Who</span><span class="v">Family &amp; founder-owned businesses</span></li>
+          <li><span class="k">Market</span><span class="v">Lower middle market</span></li>
+          <li><span class="k">Run by</span><span class="v">The Pitts brothers, start to close</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= 03 MACHINE ================= -->
+<main class="page" id="pg-machine">
+  <div class="wrap">
+    <p class="eyebrow rise">Chapter 03 · The Machine</p>
+    <h2 class="display rise d1">Deal software wasn't built by people who do deals.<br><em>So we built our own.</em></h2>
+    <div class="ch-grid">
+      <div>
+        <p class="prose rise d2">Running deals at Salt Creek Advisory meant juggling spreadsheets, a CRM that didn't fit, and a hundred follow-ups living in someone's head. So we built HelmIQ: an operating system for dealmakers. It doesn't find the companies for you. It keeps everything organized and handles the busywork in the background, so you can spend your time actually doing the deal.</p>
+        <p class="prose rise d3">It was born in the lower middle market because that's where we live, but it's built for anyone who does deals. Advisors, private equity and origination teams, family offices, searchers. If your day is companies, conversations, and follow-ups, it works for you.</p>
+        <p class="prose rise d3">Every piece of it got tested on our own live deals before anyone else touched it.</p>
+        <div class="ctas rise d4">
+          <a class="btn" href="https://helmiq.net" target="_blank" rel="noopener">Visit helmiq.net</a>
+          <a class="btn ghost" href="https://helmiq.net/book/jack-pitts" target="_blank" rel="noopener">Get a demo</a>
+          <a class="btn ghost" href="mailto:jack@helmiq.net">jack@helmiq.net</a>
+        </div>
+      </div>
+      <div>
+        <div class="logo-card rise d2">
+          <a href="https://helmiq.net" target="_blank" rel="noopener"><img src="assets/helmiq-wordmark-dark.png" alt="HelmIQ logo" style="max-width:300px"></a>
+          <a class="visit" href="https://helmiq.net" target="_blank" rel="noopener">helmiq.net ↗</a>
+        </div>
+        <ul class="facts rise d3">
+          <li><span class="k">What</span><span class="v">An AI operating system for deals</span></li>
+          <li><span class="k">Does</span><span class="v">Keeps you organized, runs the background work</span></li>
+          <li><span class="k">Doesn't</span><span class="v">Do the deal for you. That's your job</span></li>
+          <li><span class="k">Born in</span><span class="v">The lower middle market</span></li>
+          <li><span class="k">Built for</span><span class="v">Anyone who does deals</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pipeline rise d5">
+      <div><div class="pl-n">01</div><div class="pl-t">Organized</div><div class="pl-d">Companies, contacts, and notes in one place, kept current.</div></div>
+      <div><div class="pl-n">02</div><div class="pl-t">Background work</div><div class="pl-d">Notes, reminders, and prep handled while you work.</div></div>
+      <div><div class="pl-n">03</div><div class="pl-t">Pipeline</div><div class="pl-d">Every deal, every stage, nothing living in your head.</div></div>
+      <div><div class="pl-n">04</div><div class="pl-t">Follow-up</div><div class="pl-d">Nothing slips. The system remembers so you don't have to.</div></div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= 04 SHOW ================= -->
+<main class="page" id="pg-show">
+  <div class="wrap">
+    <p class="eyebrow rise">Chapter 04 · The Mic</p>
+    <h2 class="display rise d1">I just like asking people <em>how they built it.</em></h2>
+    <div class="ch-grid">
+      <div>
+        <p class="prose rise d2">That's the honest origin story. I love podcasts, I love talking to people, so I started one. The Making Of Hosted By Jack Pitts is long-form conversations with founders, investors, and operators about how the thing actually got made. The early doubts, the pivots, the deals that nearly died.</p>
+        <p class="prose rise d3">Every episode feeds everything else. Guests become friends, friends become the network, and the lessons go straight back into the firm and the product.</p>
+        <p class="prose rise d3">Building something worth talking about? The guest calendar is open.</p>
+        <div class="ctas rise d4">
+          <a class="btn" href="https://calendar.app.google/8s9JEAriAqG2qS7MA" target="_blank" rel="noopener">Pitch yourself as a guest</a>
+        </div>
+      </div>
+      <div>
+        <div class="logo-card rise d2">
+          <a href="https://themakingofhostedbyjackpitts.com" target="_blank" rel="noopener"><img src="assets/tmo-logo.png" alt="The Making Of Hosted By Jack Pitts logo" style="max-width:280px"></a>
+          <a class="visit" href="https://themakingofhostedbyjackpitts.com" target="_blank" rel="noopener">themakingofhostedbyjackpitts.com ↗</a>
+        </div>
+        <ul class="listen rise d3">
+          <li><a href="https://themakingofhostedbyjackpitts.com" target="_blank" rel="noopener"><span class="pl-name">The show's website</span><span class="pl-go">Visit →</span></a></li>
+          <li><a href="https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH" target="_blank" rel="noopener"><span class="pl-name">Spotify</span><span class="pl-go">Listen →</span></a></li>
+          <li><a href="https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144" target="_blank" rel="noopener"><span class="pl-name">Apple Podcasts</span><span class="pl-go">Listen →</span></a></li>
+          <li><a href="https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg" target="_blank" rel="noopener"><span class="pl-name">YouTube</span><span class="pl-go">Watch →</span></a></li>
+          <li><a href="https://www.instagram.com/themakingofhostedbyjackpitts" target="_blank" rel="noopener"><span class="pl-name">Instagram</span><span class="pl-go">Follow →</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pmop rise d5">
+      <div class="pm-logo"><img src="assets/pmop-logo.png" alt="Private Markets Origination Professionals logo"></div>
+      <div class="pm-body">
+        <h3>Private Markets Origination Professionals</h3>
+        <p>The other thing I started: a group for the people who do sourcing and origination for a living. We talk deal flow, outreach, what's working and what isn't. Same idea as the show, just with the mics off. Events are coming next, so if you'd come to one, say hi.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= 05 CONTACT ================= -->
+<main class="page" id="pg-contact">
+  <div class="wrap">
+    <p class="eyebrow rise">Epilogue · Your Move</p>
+    <h2 class="display rise d1">Selling, building, <em>or backing?</em><br>Let's talk.</h2>
+    <p class="prose rise d2" style="margin-top:30px">Owners thinking about a sale. Investors who want a real look at the lower middle market. Anyone curious about HelmIQ. Builders with a story for The Making Of Hosted By Jack Pitts. Fastest path is the calendar.</p>
+    <div class="ctas rise d3">
+      <a class="btn" href="https://helmiq.net/book/jack-pitts" target="_blank" rel="noopener" style="padding:18px 40px;font-size:1rem">Book time with Jack →</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/jack-pitts" target="_blank" rel="noopener" style="padding:18px 40px">Connect on LinkedIn</a>
+    </div>
+    <div class="news rise d4">
+      <div>
+        <div class="n-label">The Letter · Coming Soon</div>
+        <h3>I'm starting a newsletter. <em>Get in before issue one.</em></h3>
+        <p>Notes from someone young building in private markets and AI. What I'm learning at the deal table, who I'm meeting, what's working and what I got wrong. Short and real, every so often.</p>
+      </div>
+      <div class="n-side">
+        <a class="btn" href="mailto:jack@saltcreekadvisory.com?subject=Put%20me%20on%20the%20newsletter&body=Hey%20Jack%2C%20add%20me%20to%20the%20list." style="text-align:center">Get on the list →</a>
+        <a class="btn ghost" href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener" style="text-align:center">Follow along on Instagram</a>
+      </div>
+    </div>
+    <div class="ep-mails rise d4">
+      <a href="mailto:jack@saltcreekadvisory.com"><div class="em-l">Advisory · Salt Creek Advisory</div><div class="em-v">jack@saltcreekadvisory.com</div></a>
+      <a href="mailto:jack@helmiq.net"><div class="em-l">Software · HelmIQ</div><div class="em-v">jack@helmiq.net</div></a>
+    </div>
+    <div class="index-links rise d5">
+      <a href="https://saltcreekadvisory.com" target="_blank" rel="noopener">saltcreekadvisory.com</a>
+      <a href="https://helmiq.net" target="_blank" rel="noopener">helmiq.net</a>
+      <a href="https://themakingofhostedbyjackpitts.com" target="_blank" rel="noopener">themakingofhostedbyjackpitts.com</a>
+      <a href="https://helmiq.net/book/jack-pitts" target="_blank" rel="noopener">Book time</a>
+      <a href="https://calendar.app.google/8s9JEAriAqG2qS7MA" target="_blank" rel="noopener">Guest booking</a>
+      <a href="https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a href="https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/in/jack-pitts" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener">Instagram · Personal</a>
+      <a href="https://www.instagram.com/themakingofhostedbyjackpitts" target="_blank" rel="noopener">Instagram · The Show</a>
+      <a href="https://www.tiktok.com/@thejackpitts" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+</main>
+
+<div id="counter"><span class="keys">← → flip chapters</span><span id="counterNum">00 / 05</span></div>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© <span id="yr"></span> Jack Pitts</span>
+    <span>Salt Creek Advisory · HelmIQ · The Making Of Hosted By Jack Pitts</span>
+    <span>CHI → NSH → NYC → CHI</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const THEMES = {
+    home:    { theme:'home',    label:'Prologue',   title:'Jack Pitts' },
+    road:    { theme:'home',    label:'Chapter 01', title:'The Road' },
+    firm:    { theme:'firm',    label:'Chapter 02', title:'Salt Creek Advisory' },
+    machine: { theme:'machine', label:'Chapter 03', title:'HelmIQ' },
+    show:    { theme:'show',    label:'Chapter 04', title:'The Making Of Hosted By Jack Pitts' },
+    contact: { theme:'contact', label:'Epilogue',   title:'Your Move' }
+  };
+
+  const ORDER = ['home', 'road', 'firm', 'machine', 'show', 'contact'];
+  let current = 'home';
+  const wipe = document.getElementById('wipe');
+  const wipeLabel = document.getElementById('wipeLabel');
+  const wipeTitle = document.getElementById('wipeTitle');
+  let busy = false;
+
+  function show(key, animate = true, push = true) {
+    const cfg = THEMES[key];
+    if (!cfg || busy) return;
+    const swap = () => {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const pg = document.getElementById('pg-' + key);
+      pg.querySelectorAll('.rise').forEach(el => { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; });
+      pg.querySelectorAll('.skyline i, .stop, .timeline').forEach(el => { el.style.animationName = 'none'; void el.offsetWidth; el.style.animationName = ''; });
+      pg.classList.add('active');
+      document.body.dataset.theme = cfg.theme;
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.go === key));
+      const i = ORDER.indexOf(key);
+      document.getElementById('counterNum').textContent = String(i).padStart(2, '0') + ' / ' + String(ORDER.length - 1).padStart(2, '0');
+      current = key;
+      scrollTo(0, 0);
+      if (push) history.replaceState(null, '', '#/' + key);
+    };
+    if (!animate) { swap(); return; }
+    busy = true;
+    wipeLabel.textContent = cfg.label;
+    wipeTitle.textContent = cfg.title;
+    wipe.classList.remove('go'); void wipe.offsetWidth;
+    wipe.classList.add('go');
+    setTimeout(swap, 460);
+    setTimeout(() => { busy = false; wipe.classList.remove('go'); }, 1050);
+  }
+
+  document.querySelectorAll('[data-go]').forEach(el =>
+    el.addEventListener('click', () => show(el.dataset.go)));
+
+  addEventListener('hashchange', () => {
+    const key = location.hash.replace('#/', '');
+    if (THEMES[key]) show(key);
+  });
+
+  const initial = location.hash.replace('#/', '');
+  if (THEMES[initial] && initial !== 'home') show(initial, false);
+
+  // arrow keys flip chapters
+  addEventListener('keydown', e => {
+    if (e.target.matches('input, textarea')) return;
+    const i = ORDER.indexOf(current);
+    if (e.key === 'ArrowRight' && i < ORDER.length - 1) show(ORDER[i + 1]);
+    if (e.key === 'ArrowLeft' && i > 0) show(ORDER[i - 1]);
+  });
+
+  // 3D tilt on the headshot
+  const hs = document.getElementById('headshot');
+  const hsImg = document.getElementById('headshotImg');
+  if (hs && matchMedia('(hover:hover)').matches) {
+    hs.addEventListener('mousemove', e => {
+      const r = hs.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      hsImg.style.transform = 'rotateY(' + (x * 9) + 'deg) rotateX(' + (-y * 9) + 'deg) scale(1.02)';
+    });
+    hs.addEventListener('mouseleave', () => { hsImg.style.transform = ''; });
+  }
+</script>
+
+</body>
+</html>
