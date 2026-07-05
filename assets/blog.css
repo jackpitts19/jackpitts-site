@@ -59,8 +59,13 @@ a{color:inherit}
 }
 .post-body ul{margin:0 0 16px 1.1em}
 .post-body li{font-size:.98rem;line-height:1.7;color:var(--ink-soft);margin-bottom:6px}
-.byline{
-  margin-top:10px;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;
+.byline{margin-top:28px}
+.byline .sig-close{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;
+}
+.byline .sig-name{
+  font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.9rem;
+  color:var(--ink);margin-top:6px;transform:rotate(-1deg);display:inline-block;
 }
 
 .post-list{list-style:none;margin-top:40px}
