@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thejackpitts.com/sitemap.xml
