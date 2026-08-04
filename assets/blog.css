@@ -77,6 +77,19 @@ a{color:inherit}
 .post-list h2{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:8px 0 6px}
 .post-list p{font-size:.92rem;color:var(--ink-soft)}
 
+.related{margin-top:8px;padding:26px 34px 30px;background:var(--paper)}
+.related .r-label{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--peri-deep);margin-bottom:12px;
+}
+.related ul{list-style:none;margin:0}
+.related li{border-top:1px solid var(--hairline)}
+.related li:last-child{border-bottom:1px solid var(--hairline)}
+.related a{display:block;padding:16px 4px;text-decoration:none;transition:padding .2s}
+.related a:hover{padding-left:12px}
+.related h3{font-family:var(--serif);font-weight:600;font-size:1.05rem;margin-bottom:4px}
+.related p{font-size:.88rem;color:var(--ink-soft)}
+
 footer.blog-foot{
   border-top:1px solid var(--hairline);padding:26px 0 60px;margin-top:20px;
   font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;opacity:.55;
