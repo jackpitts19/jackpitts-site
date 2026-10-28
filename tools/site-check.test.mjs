@@ -6,7 +6,7 @@ import { join, dirname, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const PAGES = ['index.html', '404.html', 'privacy.html', 'disclosures.html', 'lower-middle-market-brief/index.html',
+const PAGES = ['index.html', '404.html', 'privacy.html', 'disclosures.html',
   ...readdirSync(join(ROOT, 'blog')).filter(f => f.endsWith('.html')).map(f => `blog/${f}`)];
 const read = p => readFileSync(join(ROOT, p), 'utf8');
 const PRIVATE_LINKS = ['helmiq.net/book/', 'calendar.app.google', 'calendar.google.com'];
