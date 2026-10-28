@@ -16,14 +16,14 @@
 <meta property="og:image" content="https://thejackpitts.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Jack Pitts - Salt Creek Advisory, HelmIQ, The Making Of">
+<meta property="og:image:alt" content="Jack Pitts">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Five Cities in Two Years · Jack Pitts">
 <meta name="twitter:description" content="Chicago, Nashville, London, New York, and back to Chicago. Jack Pitts on what two years of moving taught him.">
 <meta name="twitter:image" content="https://thejackpitts.com/assets/og-image.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="../assets/blog.css">
 <script type="application/ld+json">
 {
@@ -31,9 +31,9 @@
   "@type": "BlogPosting",
   "headline": "Five Cities in Two Years",
   "datePublished": "2026-06-25",
-  "dateModified": "2026-06-25",
-  "author": { "@type": "Person", "name": "Jack Pitts" },
-  "publisher": { "@type": "Organization", "name": "Jack Pitts", "logo": { "@type": "ImageObject", "url": "https://thejackpitts.com/assets/headshot.jpg" } },
+  "dateModified": "2026-10-28",
+  "author": { "@type": "Person", "@id": "https://thejackpitts.com/#jack", "name": "Jack Pitts", "url": "https://thejackpitts.com/" },
+  "publisher": { "@type": "Person", "name": "Jack Pitts", "url": "https://thejackpitts.com/" },
   "image": "https://thejackpitts.com/assets/og-image.jpg",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://thejackpitts.com/blog/five-cities-two-years.html" },
   "description": "Chicago, Nashville, London, New York, and back to Chicago. Jack Pitts on what two years of moving taught him."
@@ -52,23 +52,26 @@
 </script>
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
   <nav class="blog-nav"><a href="/blog/">← Blog</a></nav>
   <div class="post-head">
     <div class="stamp">JUN 25 2026 · CHICAGO</div>
     <h1>Five cities in two years</h1>
   </div>
   <div class="post-body">
-    <p>Chicago is where I grew up, LaGrange Park, in the western suburbs. Football and basketball, my brother and I both played defense, and something about that team and that community stuck with me more than I expected it to. Then I left for Nashville, for Vanderbilt, and for two years after that I didn't really stop moving.</p>
+    <p>Chicago is where I grew up, La Grange Park, in the western suburbs. Football and basketball, my brother and I both played defense, and something about that team and that community stuck with me more than I expected it to. Then I left for Nashville, for Vanderbilt, and for two years after that I didn't really stop moving.</p>
     <p>The real education in Nashville wasn't in the classroom, it was building a nonprofit called Trash Troopers from nothing and learning how to keep people showing up to something that didn't exist a year before. I studied Human and Organizational Development on paper. Off paper, by senior year, I already knew I wasn't staying in Tennessee once it ended.</p>
     <p>That senior year, I studied abroad in London for a semester, living in Elephant and Castle and working at a private equity firm there. That's actually where it clicked that I wanted to be on the relationship side of finance, not just the analytical side. Nobody there had known me longer than a few weeks, and I liked that more than I expected to.</p>
-    <p>Then New York, to live and work in private equity: three firms in a few years, Blue Wolf Capital, Coastal Partners, Kingfish Group. That kind of turnover is its own restlessness, but it's also how you learn fast, watching different desks move deals differently. I liked that city too.</p>
+    <p>Then New York, to live and work in private equity: three firms in a few years, Blue Wolf Capital, Coastal Partners, and Kingfish Capital, on the business development and deal origination side. That kind of turnover is its own restlessness, but it's also how you learn fast, watching different desks move deals differently. I liked that city too.</p>
     <p>Here's what five stops in two years actually taught me. I wasn't chasing something new each time, I was running from standing still. Comfort made me anxious; new rooms didn't. That works fine at twenty-two. It stops working as a plan.</p>
-    <p>So coming back to Chicago was on purpose, not a fallback. Staying in the city I already know is the first time in five years I've picked a place instead of just leaving the last one. Next part gets written back home.</p>
+    <p>So coming back to Chicago was on purpose (<a href="https://saltcreekadvisory.com/articles/coming-home-family-midwest-fourth-of-july">I wrote more about coming home here</a>), not a fallback. Staying in the city I already know is the first time in five years I've picked a place instead of just leaving the last one. Next part gets written back home.</p>
     <div class="byline">
       <div class="sig-close">Yours truly,</div>
       <div class="sig-name">Jack Pitts</div>
     </div>
+    <aside class="author-box" aria-label="About the author">
+      <p><strong>Jack Pitts</strong> runs <a href="https://saltcreekadvisory.com" target="_blank" rel="noopener">Salt Creek Advisory</a> with his brother, Connor. They advise owners of family- and founder-owned businesses on selling their companies. Thinking about a sale? Email <a href="mailto:jack@saltcreekadvisory.com">jack@saltcreekadvisory.com</a>. <a href="/">More about Jack</a>.</p>
+    </aside>
   </div>
   <nav class="related" aria-label="More posts">
     <h2 class="r-label">Keep reading</h2>
@@ -87,9 +90,9 @@
       </li>
     </ul>
   </nav>
-</div>
+</main>
 <footer class="blog-foot">
-  <div class="wrap">© <span id="yr"></span> Jack Pitts · <a href="/">thejackpitts.com</a></div>
+  <div class="wrap">© <span id="yr"></span> Jack Pitts · <a href="/">thejackpitts.com</a> · <a href="/privacy.html">Privacy</a> · <a href="/disclosures.html">Disclosures</a></div>
 </footer>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>

@@ -2,18 +2,58 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/index.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.thejackpitts.com"
+        }
+      ],
+      "destination": "https://thejackpitts.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/index.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.thejackpitts.com"
+        }
+      ],
+      "destination": "https://thejackpitts.com/blog/",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.thejackpitts.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.thejackpitts.com"
+        }
+      ],
       "destination": "https://thejackpitts.com/$1",
       "permanent": true
     },
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/blog/index.html", "destination": "/blog/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/index.html",
+      "destination": "/blog/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/docs/(.*)",
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }

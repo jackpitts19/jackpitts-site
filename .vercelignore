@@ -1,0 +1,4 @@
+# Keep internal files out of the public deploy.
+docs/
+tools/
+README.md

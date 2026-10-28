@@ -16,14 +16,14 @@
 <meta property="og:image" content="https://thejackpitts.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Jack Pitts - Salt Creek Advisory, HelmIQ, The Making Of">
+<meta property="og:image:alt" content="Jack Pitts">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Any Idea, Any AI · Jack Pitts">
 <meta name="twitter:description" content="Jack Pitts on how AI is democratizing who gets to build, if you understand the idea, you can build it yourself now.">
 <meta name="twitter:image" content="https://thejackpitts.com/assets/og-image.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css">
 <link rel="stylesheet" href="../assets/blog.css">
 <script type="application/ld+json">
 {
@@ -31,9 +31,9 @@
   "@type": "BlogPosting",
   "headline": "Any Idea, Any AI",
   "datePublished": "2026-07-08",
-  "dateModified": "2026-07-08",
-  "author": { "@type": "Person", "name": "Jack Pitts" },
-  "publisher": { "@type": "Organization", "name": "Jack Pitts", "logo": { "@type": "ImageObject", "url": "https://thejackpitts.com/assets/headshot.jpg" } },
+  "dateModified": "2026-10-28",
+  "author": { "@type": "Person", "@id": "https://thejackpitts.com/#jack", "name": "Jack Pitts", "url": "https://thejackpitts.com/" },
+  "publisher": { "@type": "Person", "name": "Jack Pitts", "url": "https://thejackpitts.com/" },
   "image": "https://thejackpitts.com/assets/og-image.jpg",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://thejackpitts.com/blog/any-idea-any-ai.html" },
   "description": "Jack Pitts on how AI is democratizing who gets to build, if you understand the idea, you can build it yourself now."
@@ -52,7 +52,7 @@
 </script>
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
   <nav class="blog-nav"><a href="/blog/">← Blog</a></nav>
   <div class="post-head">
     <div class="stamp">JUL 08 2026 · CHICAGO</div>
@@ -61,13 +61,16 @@
   <div class="post-body">
     <p>For most of my life, having the best idea in the room didn't count for much unless you could code it yourself, or had enough capital to hire someone who could. Permission, capital, a technical co-founder, that was the toll booth between an idea and a working thing. Most good ideas never made it through it.</p>
     <p>That toll booth is mostly gone now. If you understand your idea deeply enough, the actual mechanics of the problem you're solving, not just the pitch, you can build it yourself, and it comes out as working software.</p>
-    <p>HelmIQ is the proof, because I lived it. We didn't have a software team. We had a CRM that didn't fit how we actually ran deals, a pile of spreadsheets, and more follow-ups than lived anywhere but someone's memory. The old version of me would have written a spec, gone looking for an engineer, and waited. Instead I started building it myself using Claude Code, taught myself to code in the process, and we're still adding to it every week. That wasn't because I became an engineer overnight. It was because I understood the problem better than anyone I could have hired to solve it, and AI closed the gap between that understanding and working software.</p>
+    <p><a href="https://helmiq.net">HelmIQ</a> is the proof, because I lived it. We didn't have a software team. We had a CRM that didn't fit how we actually ran deals, a pile of spreadsheets, and more follow-ups than lived anywhere but someone's memory. The old version of me would have written a spec, gone looking for an engineer, and waited. Instead I started building it myself using Claude Code, taught myself to code in the process, and we're still adding to it every week. That wasn't because I became an engineer overnight. It was because I understood the problem better than anyone I could have hired to solve it, and AI closed the gap between that understanding and working software.</p>
     <p>That's a real shift in who gets to build. The person who understands a problem best is now also the person best positioned to fix it. Ownership and capability used to live in different people; now they can live in the same one.</p>
     <p>I'm excited about this because I've done it myself, on a real problem, with real stakes, at Salt Creek. HelmIQ exists because I understood the problem and had a way to act on that understanding directly.</p>
     <div class="byline">
       <div class="sig-close">Yours truly,</div>
       <div class="sig-name">Jack Pitts</div>
     </div>
+    <aside class="author-box" aria-label="About the author">
+      <p><strong>Jack Pitts</strong> runs <a href="https://saltcreekadvisory.com" target="_blank" rel="noopener">Salt Creek Advisory</a> with his brother, Connor. They advise owners of family- and founder-owned businesses on selling their companies. Thinking about a sale? Email <a href="mailto:jack@saltcreekadvisory.com">jack@saltcreekadvisory.com</a>. <a href="/">More about Jack</a>.</p>
+    </aside>
   </div>
   <nav class="related" aria-label="More posts">
     <h2 class="r-label">Keep reading</h2>
@@ -86,9 +89,9 @@
       </li>
     </ul>
   </nav>
-</div>
+</main>
 <footer class="blog-foot">
-  <div class="wrap">© <span id="yr"></span> Jack Pitts · <a href="/">thejackpitts.com</a></div>
+  <div class="wrap">© <span id="yr"></span> Jack Pitts · <a href="/">thejackpitts.com</a> · <a href="/privacy.html">Privacy</a> · <a href="/disclosures.html">Disclosures</a></div>
 </footer>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
