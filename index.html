@@ -35,7 +35,11 @@
       "name": "Jack Pitts",
       "publisher": {
         "@id": "https://thejackpitts.com/#jack"
-      }
+      },
+      "alternateName": [
+        "thejackpitts.com",
+        "Jack Pitts"
+      ]
     },
     {
       "@type": "ProfilePage",
@@ -54,7 +58,13 @@
       "@id": "https://thejackpitts.com/#jack",
       "name": "Jack Pitts",
       "url": "https://thejackpitts.com/",
-      "image": "https://thejackpitts.com/assets/headshot.jpg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://thejackpitts.com/assets/headshot.jpg",
+        "width": 628,
+        "height": 784,
+        "caption": "Jack Pitts"
+      },
       "jobTitle": "Co-Founder & Principal, Salt Creek Advisory",
       "worksFor": [
         {
@@ -120,15 +130,16 @@
     },
     {
       "@type": "PodcastSeries",
-      "@id": "https://thejackpitts.com/#lower-middle-market-brief",
+      "@id": "https://thejackpitts.com/lower-middle-market-brief/#podcast",
       "name": "Lower Middle Market Brief",
-      "url": "https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572",
+      "url": "https://thejackpitts.com/lower-middle-market-brief/",
       "webFeed": "https://api.riverside.com/hosting/SCQy5vMa.rss",
       "author": {
         "@id": "https://thejackpitts.com/#jack"
       },
       "sameAs": [
-        "https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4"
+        "https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4",
+        "https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572"
       ],
       "image": "https://thejackpitts.com/assets/lmmb-logo.webp"
     }
@@ -258,20 +269,22 @@
   .page.active .rise.d5{animation-delay:.44s}
   .page.active .rise.d6{animation-delay:.54s}
 
+  h1.eyebrow{font-weight:600}
+  @media(max-width:560px){h1.eyebrow{letter-spacing:.14em;flex-wrap:wrap}h1.eyebrow::after{display:none}}
   .eyebrow{
     font-family:var(--mono);font-weight:600;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
     color:var(--peri);margin-bottom:30px;display:flex;align-items:center;gap:16px;
   }
   .eyebrow::after{content:"";width:54px;height:1px;background:currentColor;opacity:.5}
   body[data-theme="show"] .eyebrow{color:var(--orange)}
-  h1,h2.display{
+  .hero-line,h2.display{
     font-family:var(--serif);font-weight:400;
     font-size:clamp(2.3rem,5.4vw,4.25rem);
     line-height:1.08;letter-spacing:-.01em;max-width:15em;
   }
-  h1 b,h2.display b{font-weight:700}
-  h1 em,h2.display em{font-style:normal;font-weight:400;color:var(--peri)}
-  body[data-theme="show"] h1 em, body[data-theme="show"] h2.display em{color:var(--orange)}
+  .hero-line b,h2.display b{font-weight:700}
+  .hero-line em,h2.display em{font-style:normal;font-weight:400;color:var(--peri)}
+  body[data-theme="show"] .hero-line em, body[data-theme="show"] h2.display em{color:var(--orange)}
   .prose{font-size:1.04rem;max-width:39em;opacity:.8}
   .prose+.prose{margin-top:16px}
   .prose strong{opacity:1;font-weight:600}
@@ -543,17 +556,19 @@
 
   /* ================= READABILITY + ACCESS ================= */
   body[data-theme="home"] .eyebrow,body[data-theme="home"] .tab .no,body[data-theme="home"] .cc .cc-no,
-  body[data-theme="home"] .stop .when,body[data-theme="home"] h1 em,body[data-theme="home"] h2.display em,
+  body[data-theme="home"] .stop .when,body[data-theme="home"] .hero-line em,body[data-theme="home"] h2.display em,
   body[data-theme="home"] .brand i,body[data-theme="home"] .marquee b{color:var(--peri-ink)}
   body[data-theme="show"] .eyebrow,body[data-theme="show"] .tab .no,body[data-theme="show"] .listen .pl-go,
   body[data-theme="show"] h2.display em,body[data-theme="show"] .brand i{color:var(--orange-ink)}
   body[data-theme="firm"] .eyebrow,body[data-theme="firm"] .pullq small,body[data-theme="firm"] .steps li::before,body[data-theme="firm"] .tab .no{color:#9aa9ee}
-  h1,h2.display,.stop h3,.news h3,.cc h2,.show-card h3{text-wrap:balance}
+  .hero-line,h2.display,.stop h3,.news h3,.cc h2,.show-card h3{text-wrap:balance}
   .prose,.stop p,.cc p,.show-card p,.news p,.steps li{text-wrap:pretty}
   a:focus-visible,button:focus-visible{outline:2px solid var(--peri);outline-offset:3px}
   body[data-theme="show"] a:focus-visible,body[data-theme="show"] button:focus-visible{outline-color:var(--orange)}
-  .page h1:focus,.page h2.display:focus{outline:none}
+  .page h1:focus,.page .hero-line:focus,.page h2.display:focus{outline:none}
   .nowrap{white-space:nowrap}
+  a.plain{text-decoration:none;color:inherit}
+  a.plain:hover{text-decoration:underline}
   .skip{position:absolute;left:12px;top:-60px;z-index:400;background:var(--ink);color:var(--paper);padding:10px 16px;font-family:var(--mono);font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
   .skip:focus{top:12px}
   @media(max-width:560px){
@@ -602,8 +617,8 @@
   <div class="wrap">
     <div class="home-grid">
       <div>
-        <p class="eyebrow rise">Prologue · Jack Pitts</p>
-        <h1 class="rise d1" id="h-home">Every company has a <em>making of.</em><br>Here's mine, so far.</h1>
+        <h1 class="eyebrow rise" id="h-home">Jack Pitts · Co-Founder, Salt Creek Advisory</h1>
+        <p class="hero-line rise d1">Every company has a <em>making of.</em><br>Here's mine, so far.</p>
         <p class="prose rise d2" style="margin-top:34px">I'm Jack. I run <strong>Salt Creek Advisory</strong> with my brother, Connor. We advise owners of family- and founder-owned businesses in the lower middle market on selling their companies, and we only represent sellers.</p>
         <p class="prose rise d3">I grew up outside Chicago, went to Vanderbilt, spent a semester in London, worked in finance in St. Louis and New York, and came home to Chicago. I also host two podcasts and write on Substack.</p>
         <div class="ctas rise d4">
@@ -774,11 +789,12 @@
           <img src="assets/lmmb-logo.webp" alt="" width="480" height="480" loading="lazy" decoding="async">
           <div>
             <div class="sc-label">Short-form brief</div>
-            <h3 id="h-lmmb">Lower Middle Market Brief</h3>
+            <h3 id="h-lmmb"><a href="/lower-middle-market-brief/" class="plain">Lower Middle Market Brief</a></h3>
           </div>
         </div>
         <p>My newer show. It's a short podcast about lower-middle-market deals, what's happening in the market, and the people working in the industry. Episodes run about 10 to 15 minutes.</p>
         <ul class="listen">
+          <li><a href="/lower-middle-market-brief/"><span class="pl-name">About the show and every episode</span><span class="pl-go">Visit →</span></a></li>
           <li><a href="https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4" target="_blank" rel="noopener"><span class="pl-name">Lower Middle Market Brief on Spotify</span><span class="pl-go">Listen →</span></a></li>
           <li><a href="https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572" target="_blank" rel="noopener"><span class="pl-name">Lower Middle Market Brief on Apple Podcasts</span><span class="pl-go">Listen →</span></a></li>
         </ul>
@@ -902,6 +918,7 @@
       <a href="https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144" target="_blank" rel="noopener">The Making Of · Apple Podcasts</a>
       <a href="https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg" target="_blank" rel="noopener">The Making Of · YouTube</a>
       <a href="https://www.instagram.com/themakingofhostedbyjackpitts" target="_blank" rel="noopener">The Making Of · Instagram</a>
+      <a href="/lower-middle-market-brief/">Lower Middle Market Brief · Episodes</a>
       <a href="https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4" target="_blank" rel="noopener">Lower Middle Market Brief · Spotify</a>
       <a href="https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572" target="_blank" rel="noopener">Lower Middle Market Brief · Apple Podcasts</a>
       <a href="https://helmiq.net" target="_blank" rel="noopener">helmiq.net</a>

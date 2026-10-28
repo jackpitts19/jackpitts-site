@@ -62,3 +62,29 @@ The "Page with redirect" list (http://, www., /index.html, /blog/index.html) is 
 - HelmIQ: new logo; "built it myself with Claude Code, a few firms license it, not out selling it."
 - Socials: TikTok removed; Instagram @thejackpitts and @saltcreekadvisory.
 - New social share image: `assets/og-jack-pitts-2026.jpg` (new filename so LinkedIn and other platforms fetch the new one). After deploy, run the homepage through LinkedIn Post Inspector to refresh LinkedIn's preview.
+
+## SEO plan (round 4, 2026-10-28)
+
+Keyword map (one main topic per URL, so the sites don't compete with each other):
+
+| Search people make | Page that should rank |
+|---|---|
+| Jack Pitts; Jack Pitts Chicago; Jack Pitts Salt Creek Advisory; Jack Pitts Vanderbilt | thejackpitts.com/ (the H1 now names Jack and his role) |
+| Lower Middle Market Brief; Lower Middle Market Brief podcast | thejackpitts.com/lower-middle-market-brief/ (new; the show had no web page) |
+| The Making Of Hosted by Jack Pitts | themakingofhostedbyjackpitts.com (this site links to it, not competing) |
+| sell-side M&A Chicago; selling a family business; M&A advisor lower middle market | saltcreekadvisory.com (this site links to its guides) |
+| HelmIQ | helmiq.net |
+
+Refresh episodes after a new Brief: `node tools/lmmb-snapshot.mjs`, then commit.
+
+IndexNow (Bing, Yandex, and the search behind ChatGPT and Copilot): key file `/eba6c4f56581130135674d38a3988b9b.txt` ships with this PR. After deploy, notify once with:
+`curl -s "https://api.indexnow.org/indexnow?url=https://thejackpitts.com/lower-middle-market-brief/&key=eba6c4f56581130135674d38a3988b9b"` (and the same for /). Not sent yet; it's an external submission.
+
+Off-site checklist (where rankings will actually move):
+- [ ] Search Console: resubmit sitemap.xml; URL Inspection, then request indexing for / and /lower-middle-market-brief/.
+- [ ] Bing Webmaster Tools: add the site (it can import from Search Console) and submit the sitemap.
+- [ ] Spotify and Apple show descriptions for Lower Middle Market Brief: add "thejackpitts.com/lower-middle-market-brief". Set the RSS channel link (currently the bare text "saltcreekadvisory.com") to that page in Riverside.
+- [ ] Every Lower Middle Market Brief and The Making Of episode description: one line linking thejackpitts.com.
+- [ ] LinkedIn, Instagram, and Substack bios: link thejackpitts.com.
+- [ ] Ask hosts and event pages that feature Jack to use the press bio and link thejackpitts.com.
+- [ ] LinkedIn Post Inspector on / and /lower-middle-market-brief/ after deploy.

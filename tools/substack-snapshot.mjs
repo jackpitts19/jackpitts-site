@@ -6,6 +6,7 @@
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { toPlainText, escapeHtml, truncate, isoDate, displayDate, isSafeUrl, injectBetween } from './html-utils.mjs';
 
 const FEED_URL = 'https://thejackpitts.substack.com/feed';
 const POST_PREFIX = 'https://thejackpitts.substack.com/p/';
@@ -14,44 +15,10 @@ const MAX_EXCERPT = 160;
 const FETCH_TIMEOUT_MS = 10000;
 const START = '<!-- substack:start -->';
 const END = '<!-- substack:end -->';
-const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-
-const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
-
-function decodeEntities(text) {
-  return text.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, code) => {
-    if (code[0] === '#') {
-      const n = code[1].toLowerCase() === 'x' ? parseInt(code.slice(2), 16) : parseInt(code.slice(1), 10);
-      return Number.isFinite(n) ? String.fromCodePoint(n) : m;
-    }
-    return ENTITIES[code.toLowerCase()] ?? m;
-  });
-}
-
-function toPlainText(raw) {
-  const unwrapped = raw.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1');
-  const noScripts = unwrapped.replace(/<(script|style)[\s\S]*?<\/\1>/gi, '');
-  return decodeEntities(noScripts.replace(/<[^>]*>/g, '')).replace(/\s+/g, ' ').trim();
-}
-
-function escapeHtml(text) {
-  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-
-function truncate(text, max) {
-  if (text.length <= max) return text;
-  const cut = text.slice(0, max);
-  return cut.slice(0, cut.lastIndexOf(' ') > 0 ? cut.lastIndexOf(' ') : max).trimEnd() + '…';
-}
 
 function tag(block, name) {
   const m = block.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`, 'i'));
   return m ? m[1] : '';
-}
-
-function isoDate(pubDate) {
-  const d = new Date(pubDate);
-  return Number.isNaN(d.getTime()) ? null : d.toISOString().slice(0, 10);
 }
 
 export function parseFeed(xml) {
@@ -63,12 +30,7 @@ export function parseFeed(xml) {
       date: isoDate(toPlainText(tag(block, 'pubDate'))),
       excerpt: truncate(toPlainText(tag(block, 'description')), MAX_EXCERPT),
     }))
-    .filter(p => p.title && p.date && p.url.startsWith(POST_PREFIX) && !/[\s"'<>]/.test(p.url));
-}
-
-function displayDate(iso) {
-  const [y, m, d] = iso.split('-');
-  return `${MONTHS[Number(m) - 1]} ${d} ${y}`;
+    .filter(p => p.title && p.date && isSafeUrl(p.url, POST_PREFIX));
 }
 
 export function renderList(posts, limit = MAX_POSTS) {
@@ -85,10 +47,7 @@ export function renderList(posts, limit = MAX_POSTS) {
 }
 
 export function injectSnapshot(html, block) {
-  const start = html.indexOf(START);
-  const end = html.indexOf(END);
-  if (start === -1 || end === -1 || end < start) throw new Error('Substack markers not found');
-  return html.slice(0, start + START.length) + '\n' + block + '\n        ' + html.slice(end);
+  return injectBetween(html, block, START, END);
 }
 
 export async function updateFile(file, fetchImpl = fetch) {

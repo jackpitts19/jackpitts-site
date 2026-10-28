@@ -21,7 +21,7 @@ let busy = false;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
 function focusHeading(pg) {
-  const h = pg.querySelector('h1, h2.display');
+  const h = pg.querySelector('.hero-line, h2.display');
   if (!h) return;
   h.setAttribute('tabindex', '-1');
   h.focus({ preventScroll: true });
