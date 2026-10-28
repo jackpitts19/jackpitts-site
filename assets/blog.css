@@ -4,12 +4,12 @@
   --ink:#0e0d0a;
   --ink-soft:#4a463c;
   --peri:#7b8fe4;
-  --peri-deep:#5a72d8;
+  --peri-deep:#4458c0;
   --orange:#d87a2c;
   --hairline:rgba(14,13,10,.16);
-  --serif:'Fraunces',Georgia,serif;
-  --sans:'Inter',-apple-system,sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  --serif:'Source Serif 4','Source Serif 4 Fallback',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:var(--sans);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%}
@@ -23,8 +23,8 @@ a{color:inherit}
 
 .blog-nav{padding:26px 0 0}
 .blog-nav a{
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
-  text-decoration:none;opacity:.6;transition:opacity .2s;
+  font-family:var(--mono);font-weight:600;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;opacity:.78;transition:opacity .2s;
 }
 .blog-nav a:hover{opacity:1;color:var(--peri-deep)}
 
@@ -38,11 +38,11 @@ a{color:inherit}
   border-color:transparent #d8cfae transparent transparent;
 }
 .stamp{
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  font-family:var(--mono);font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
   background:var(--ink);color:var(--paper);display:inline-block;padding:5px 12px;margin-bottom:20px;
 }
 .post-head h1{
-  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-family:var(--serif);font-style:normal;font-weight:400;
   font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;
 }
 
@@ -61,10 +61,10 @@ a{color:inherit}
 .post-body li{font-size:.98rem;line-height:1.7;color:var(--ink-soft);margin-bottom:6px}
 .byline{margin-top:28px}
 .byline .sig-close{
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;
+  font-family:var(--mono);font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;
 }
 .byline .sig-name{
-  font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.9rem;
+  font-family:var(--serif);font-style:normal;font-weight:600;font-size:1.9rem;
   color:var(--ink);margin-top:6px;transform:rotate(-1deg);display:inline-block;
 }
 
@@ -73,13 +73,22 @@ a{color:inherit}
 .post-list li:last-child{border-bottom:1px solid var(--hairline)}
 .post-list a{display:block;padding:26px 4px;text-decoration:none;transition:padding .2s}
 .post-list a:hover{padding-left:14px}
-.post-list .p-date{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--peri-deep)}
+.post-list .p-date{font-family:var(--mono);font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--peri-deep)}
 .post-list h2{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:8px 0 6px}
 .post-list p{font-size:.92rem;color:var(--ink-soft)}
 
+.legal p:first-of-type::first-letter{font:inherit;color:inherit;float:none;padding:0}
+.legal{padding-top:28px}
+.legal a,.post-body a{color:var(--peri-deep);text-underline-offset:3px}
+.blog-foot a{text-decoration:none}
+.blog-foot a:hover{text-decoration:underline}
+.blog-intro{margin-top:18px;font-size:.98rem;color:var(--ink-soft);max-width:38em}
+.blog-intro a{color:var(--peri-deep);text-underline-offset:3px}
+.author-box{margin-top:30px;padding-top:20px;border-top:1px solid var(--hairline)}
+.author-box p{font-size:.92rem;margin:0}
 .related{margin-top:8px;padding:26px 34px 30px;background:var(--paper)}
 .related .r-label{
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  font-family:var(--mono);font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
   color:var(--peri-deep);margin-bottom:12px;
 }
 .related ul{list-style:none;margin:0}
@@ -92,5 +101,5 @@ a{color:inherit}
 
 footer.blog-foot{
   border-top:1px solid var(--hairline);padding:26px 0 60px;margin-top:20px;
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;opacity:.55;
+  font-family:var(--mono);font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;opacity:.78;
 }
