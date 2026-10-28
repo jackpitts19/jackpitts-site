@@ -16,7 +16,7 @@ Personal website for Jack Pitts: Salt Creek Advisory first, then his story, two 
 node tools/substack-snapshot.mjs
 ```
 
-It reads https://thejackpitts.substack.com/feed and rewrites only the block between the `substack:start` and `substack:end` markers in `index.html`. If the feed is down or empty, the page is left exactly as it was. Tests: `node --test tools/substack-snapshot.test.mjs`.
+It reads https://thejackpitts.substack.com/feed and rewrites only the block between the `substack:start` and `substack:end` markers in `index.html`. If the feed is down or empty, the page is left exactly as it was. Tests: `node --test tools/*.test.mjs` (the Substack script plus a site check that guards links, structured data, the CSP, hidden blog, and private calendar links).
 
 ## Run locally
 
@@ -28,4 +28,4 @@ Then open http://localhost:8765/ (opening the file directly also works, but root
 
 ## Deploy
 
-Vercel, from `main`. `vercel.json` handles the www-to-apex and `/index.html` redirects.
+Vercel, from `main`. `vercel.json` handles the www-to-apex and `/index.html` redirects, security headers (strict CSP: no inline scripts, so page JS lives in `assets/home.js` and `assets/year.js`), and font caching.

@@ -113,8 +113,10 @@
       "sameAs": [
         "https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH",
         "https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144",
-        "https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg"
-      ]
+        "https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg",
+        "https://www.instagram.com/themakingofhostedbyjackpitts"
+      ],
+      "image": "https://thejackpitts.com/assets/tmo-logo.webp"
     },
     {
       "@type": "PodcastSeries",
@@ -476,6 +478,15 @@
   .list-more{margin-top:16px;font-size:.9rem}
   .list-more a{color:var(--peri-ink);text-underline-offset:3px}
 
+  /* press kit */
+  .press{margin-top:64px;display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:start;border-top:1px solid rgba(244,241,234,.16);padding-top:44px}
+  .press h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.4rem,2.6vw,1.8rem);margin:12px 0 14px}
+  .press-bio{font-size:1rem;opacity:.82;max-width:38em}
+  .press-side{display:flex;flex-direction:column;gap:12px}
+  .press-side img{width:132px;height:auto;border:1px solid rgba(244,241,234,.2)}
+  .press-side .btn{text-align:center}
+  @media(max-width:760px){.press{grid-template-columns:1fr}}
+
   /* newsletter */
   .news{
     margin-top:74px;border:1px solid rgba(244,241,234,.2);
@@ -484,7 +495,7 @@
   }
   .news::before{content:"";position:absolute;top:-1px;left:-1px;width:30px;height:30px;border-top:3px solid var(--peri);border-left:3px solid var(--peri)}
   .news::after{content:"";position:absolute;bottom:-1px;right:-1px;width:30px;height:30px;border-bottom:3px solid var(--peri);border-right:3px solid var(--peri)}
-  .news .n-label{font-family:var(--mono);font-weight:600;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--peri)}
+  .news .n-label,.press .n-label{font-family:var(--mono);font-weight:600;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--peri)}
   .news h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);margin:12px 0 12px;line-height:1.15}
   .news h3 em{font-style:normal;font-weight:400;color:var(--peri)}
   .news p{font-size:.97rem;opacity:.75;max-width:34em}
@@ -755,6 +766,7 @@
           <li><a href="https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH" target="_blank" rel="noopener"><span class="pl-name">The Making Of on Spotify</span><span class="pl-go">Listen →</span></a></li>
           <li><a href="https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144" target="_blank" rel="noopener"><span class="pl-name">The Making Of on Apple Podcasts</span><span class="pl-go">Listen →</span></a></li>
           <li><a href="https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg" target="_blank" rel="noopener"><span class="pl-name">The Making Of on YouTube</span><span class="pl-go">Watch →</span></a></li>
+          <li><a href="https://www.instagram.com/themakingofhostedbyjackpitts" target="_blank" rel="noopener"><span class="pl-name">The Making Of on Instagram</span><span class="pl-go">Follow →</span></a></li>
         </ul>
       </article>
       <article class="show-card rise d3" aria-labelledby="h-lmmb">
@@ -854,8 +866,20 @@
       <a href="https://saltcreekadvisory.com/book-a-call" target="_blank" rel="noopener"><div class="em-l">Selling a business</div><div class="em-v">Owners: book a call ↗</div><div class="em-d">If you own a business and are thinking about a sale, you can book time with Connor or me on the firm's website.</div></a>
       <a href="https://themakingofhostedbyjackpitts.com/#guests" target="_blank" rel="noopener"><div class="em-l">Podcast guests</div><div class="em-v">See the guest page ↗</div><div class="em-d">What I look for in guests on The Making Of, and how to reach out.</div></a>
       <a href="https://saltcreekadvisory.com" target="_blank" rel="noopener"><div class="em-l">The firm</div><div class="em-v">saltcreekadvisory.com ↗</div><div class="em-d">How Salt Creek Advisory works with owners, plus guides and resources.</div></a>
-      <a href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener me"><div class="em-l">Follow along</div><div class="em-v">@thejackpitts ↗</div><div class="em-d">My personal Instagram. The firm is <span class="nowrap">@saltcreekadvisory</span>.</div></a>
+      <a href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener me"><div class="em-l">Follow along</div><div class="em-v">@thejackpitts ↗</div><div class="em-d">My personal Instagram. The firm is <span class="nowrap">@saltcreekadvisory</span> and the show is <span class="nowrap">@themakingofhostedbyjackpitts</span>.</div></a>
     </div>
+    <section class="press rise d4" aria-labelledby="h-press">
+      <div>
+        <div class="n-label">For hosts, press, and event organizers</div>
+        <h3 id="h-press">Short bio</h3>
+        <p class="press-bio">Jack Pitts is co-founder and principal of Salt Creek Advisory, a family-owned, Chicago-based investment bank he runs with his brother, Connor. The firm represents owners of family- and founder-owned businesses in the lower middle market when they sell their companies. Jack hosts two podcasts, The Making Of Hosted by Jack Pitts and Lower Middle Market Brief, and writes on Substack. He built HelmIQ, the deal CRM the firm runs on. Before Salt Creek, he worked in investment banking at ButcherJoseph &amp; Co. and in private equity deal origination in New York. He graduated cum laude from Vanderbilt University.</p>
+      </div>
+      <div class="press-side">
+        <img src="assets/headshot.webp" alt="" width="628" height="784" loading="lazy" decoding="async">
+        <a class="btn ghost" href="/assets/headshot.jpg" download="jack-pitts-headshot.jpg">Download headshot</a>
+        <a class="btn ghost" href="mailto:jack@saltcreekadvisory.com?subject=Interview%20or%20speaking%20request">Interview or speaking request</a>
+      </div>
+    </section>
     <div class="news rise d4">
       <div>
         <div class="n-label">Writing · Substack</div>
@@ -877,6 +901,7 @@
       <a href="https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH" target="_blank" rel="noopener">The Making Of · Spotify</a>
       <a href="https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144" target="_blank" rel="noopener">The Making Of · Apple Podcasts</a>
       <a href="https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg" target="_blank" rel="noopener">The Making Of · YouTube</a>
+      <a href="https://www.instagram.com/themakingofhostedbyjackpitts" target="_blank" rel="noopener">The Making Of · Instagram</a>
       <a href="https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4" target="_blank" rel="noopener">Lower Middle Market Brief · Spotify</a>
       <a href="https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572" target="_blank" rel="noopener">Lower Middle Market Brief · Apple Podcasts</a>
       <a href="https://helmiq.net" target="_blank" rel="noopener">helmiq.net</a>
@@ -896,107 +921,7 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  const DEFAULT_TITLE = document.title;
-  const THEMES = {
-    home:    { theme:'home',    label:'Prologue',   title:'Jack Pitts' },
-    firm:    { theme:'firm',    label:'Chapter 02', title:'Salt Creek Advisory', docTitle:'Salt Creek Advisory · Jack Pitts' },
-    road:    { theme:'home',    label:'Chapter 01', title:'The Road', docTitle:'The Road · Jack Pitts' },
-    show:    { theme:'show',    label:'Chapter 03', title:'Podcasts', docTitle:'Podcasts · Jack Pitts' },
-    writing: { theme:'home',    label:'Chapter 04', title:'Writing', docTitle:'Writing · Jack Pitts' },
-    machine: { theme:'machine', label:'Chapter 05', title:'HelmIQ', docTitle:'HelmIQ · Jack Pitts' },
-    contact: { theme:'contact', label:'Epilogue',   title:'Contact', docTitle:'Contact · Jack Pitts' }
-  };
-
-  const ORDER = ['home', 'road', 'firm', 'show', 'writing', 'machine', 'contact'];
-  let current = 'home';
-  const wipe = document.getElementById('wipe');
-  const wipeLabel = document.getElementById('wipeLabel');
-  const wipeTitle = document.getElementById('wipeTitle');
-  let busy = false;
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-
-  function focusHeading(pg) {
-    const h = pg.querySelector('h1, h2.display');
-    if (!h) return;
-    h.setAttribute('tabindex', '-1');
-    h.focus({ preventScroll: true });
-  }
-
-  function show(key, animate = true, push = true, focus = true) {
-    const cfg = THEMES[key];
-    if (!cfg || busy) return;
-    if (reduceMotion.matches) animate = false;
-    const swap = () => {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      const pg = document.getElementById('pg-' + key);
-      pg.querySelectorAll('.rise').forEach(el => { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; });
-      pg.querySelectorAll('.skyline i, .stop, .timeline').forEach(el => { el.style.animationName = 'none'; void el.offsetWidth; el.style.animationName = ''; });
-      pg.classList.add('active');
-      document.body.dataset.theme = cfg.theme;
-      document.querySelectorAll('.tab').forEach(t => {
-        const isActive = t.dataset.go === key;
-        t.classList.toggle('active', isActive);
-        if (isActive) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
-      });
-      const i = ORDER.indexOf(key);
-      document.getElementById('counterNum').textContent = String(i).padStart(2, '0') + ' / ' + String(ORDER.length - 1).padStart(2, '0');
-      document.title = cfg.docTitle || DEFAULT_TITLE;
-      current = key;
-      scrollTo(0, 0);
-      if (push) history.replaceState(null, '', key === 'home' ? location.pathname : '#/' + key);
-      if (focus) focusHeading(pg);
-    };
-    if (!animate) { swap(); return; }
-    busy = true;
-    wipeLabel.textContent = cfg.label;
-    wipeTitle.textContent = cfg.title;
-    wipe.classList.remove('go'); void wipe.offsetWidth;
-    wipe.classList.add('go');
-    setTimeout(swap, 460);
-    setTimeout(() => { busy = false; wipe.classList.remove('go'); }, 1050);
-  }
-
-  document.querySelectorAll('[data-go]').forEach(el =>
-    el.addEventListener('click', e => {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
-      e.preventDefault();
-      if (el.dataset.go === current) { focusHeading(document.getElementById('pg-' + current)); return; }
-      show(el.dataset.go);
-    }));
-
-  addEventListener('hashchange', () => {
-    const key = location.hash.replace('#/', '') || 'home';
-    if (THEMES[key] && key !== current) show(key);
-  });
-
-  const initial = location.hash.replace('#/', '');
-  if (THEMES[initial] && initial !== 'home') show(initial, false, true, false);
-
-  // arrow keys flip chapters
-  addEventListener('keydown', e => {
-    if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
-    if (e.target.matches('input, textarea, select, [contenteditable]')) return;
-    const i = ORDER.indexOf(current);
-    if (e.key === 'ArrowRight' && i < ORDER.length - 1) show(ORDER[i + 1]);
-    if (e.key === 'ArrowLeft' && i > 0) show(ORDER[i - 1]);
-  });
-
-  // 3D tilt on the headshot
-  const hs = document.getElementById('headshot');
-  const hsImg = document.getElementById('headshotImg');
-  if (hs && matchMedia('(hover:hover)').matches) {
-    hs.addEventListener('mousemove', e => {
-      const r = hs.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - .5;
-      const y = (e.clientY - r.top) / r.height - .5;
-      hsImg.style.transform = 'rotateY(' + (x * 9) + 'deg) rotateX(' + (-y * 9) + 'deg) scale(1.02)';
-    });
-    hs.addEventListener('mouseleave', () => { hsImg.style.transform = ''; });
-  }
-</script>
+<script src="/assets/home.js"></script>
 
 </body>
 </html>
