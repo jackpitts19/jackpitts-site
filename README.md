@@ -4,8 +4,8 @@ Personal website for Jack Pitts: Salt Creek Advisory first, then his story, two 
 
 ## Structure
 
-- `index.html` is the homepage. Seven chapters (`#/firm`, `#/road`, `#/show`, `#/writing`, `#/machine`, `#/contact`), inline CSS and JS, no build step. All chapter text is in the HTML, so it works without JavaScript.
-- `blog/` holds the longer original articles. Shorter personal posts live on Substack, not here.
+- `index.html` is the homepage. Seven chapters (`#/road`, `#/firm`, `#/show`, `#/writing`, `#/machine`, `#/contact`), inline CSS and JS, no build step. All chapter text is in the HTML, so it works without JavaScript.
+- `blog/` is hidden (noindex, not linked, not in the sitemap) but every post still loads at its old URL. Writing now lives on Substack.
 - `privacy.html` and `disclosures.html` are linked from every footer.
 - `assets/` holds images, `blog.css`, and the favicon.
 - `tools/` and `docs/` are internal and excluded from the deploy by `.vercelignore`.
@@ -16,7 +16,7 @@ Personal website for Jack Pitts: Salt Creek Advisory first, then his story, two 
 node tools/substack-snapshot.mjs
 ```
 
-It reads https://thejackpitts.substack.com/feed and rewrites only the block between the `substack:start` and `substack:end` markers in `index.html`. If the feed is down or empty, the page is left exactly as it was. Tests: `node --test tools/substack-snapshot.test.mjs`.
+It reads https://thejackpitts.substack.com/feed and rewrites only the block between the `substack:start` and `substack:end` markers in `index.html`. If the feed is down or empty, the page is left exactly as it was. Tests: `node --test tools/*.test.mjs` (the Substack script plus a site check that guards links, structured data, the CSP, hidden blog, and private calendar links).
 
 ## Run locally
 
@@ -28,4 +28,4 @@ Then open http://localhost:8765/ (opening the file directly also works, but root
 
 ## Deploy
 
-Vercel, from `main`. `vercel.json` handles the www-to-apex and `/index.html` redirects.
+Vercel, from `main`. `vercel.json` handles the www-to-apex and `/index.html` redirects, security headers (strict CSP: no inline scripts, so page JS lives in `assets/home.js` and `assets/year.js`), and font caching.

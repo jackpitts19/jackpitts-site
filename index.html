@@ -14,16 +14,16 @@
 <meta property="og:title" content="Jack Pitts · Co-Founder, Salt Creek Advisory · Chicago M&amp;A">
 <meta property="og:description" content="Jack Pitts co-founded Salt Creek Advisory, a Chicago investment bank that represents family- and founder-owned businesses selling their companies.">
 <meta property="og:url" content="https://thejackpitts.com/">
-<meta property="og:image" content="https://thejackpitts.com/assets/og-image.jpg">
+<meta property="og:image" content="https://thejackpitts.com/assets/og-jack-pitts-2026.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Jack Pitts">
+<meta property="og:image:alt" content="Jack Pitts, co-founder of Salt Creek Advisory, Chicago">
 <meta property="profile:first_name" content="Jack">
 <meta property="profile:last_name" content="Pitts">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jack Pitts · Co-Founder, Salt Creek Advisory · Chicago M&amp;A">
 <meta name="twitter:description" content="Jack Pitts co-founded Salt Creek Advisory, a Chicago investment bank that represents family- and founder-owned businesses selling their companies.">
-<meta name="twitter:image" content="https://thejackpitts.com/assets/og-image.jpg">
+<meta name="twitter:image" content="https://thejackpitts.com/assets/og-jack-pitts-2026.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,7 +35,11 @@
       "name": "Jack Pitts",
       "publisher": {
         "@id": "https://thejackpitts.com/#jack"
-      }
+      },
+      "alternateName": [
+        "thejackpitts.com",
+        "Jack Pitts"
+      ]
     },
     {
       "@type": "ProfilePage",
@@ -54,14 +58,23 @@
       "@id": "https://thejackpitts.com/#jack",
       "name": "Jack Pitts",
       "url": "https://thejackpitts.com/",
-      "image": "https://thejackpitts.com/assets/headshot.jpg",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://thejackpitts.com/assets/headshot.jpg",
+        "width": 628,
+        "height": 784,
+        "caption": "Jack Pitts"
+      },
       "jobTitle": "Co-Founder & Principal, Salt Creek Advisory",
       "worksFor": [
         {
           "@type": "Organization",
           "@id": "https://saltcreekadvisory.com/#organization",
           "name": "Salt Creek Advisory",
-          "url": "https://saltcreekadvisory.com"
+          "url": "https://saltcreekadvisory.com",
+          "sameAs": [
+            "https://www.instagram.com/saltcreekadvisory"
+          ]
         },
         {
           "@type": "Organization",
@@ -81,12 +94,11 @@
       "sameAs": [
         "https://saltcreekadvisory.com/team",
         "https://www.linkedin.com/in/jack-pitts",
-        "https://thejackpitts.substack.com/",
         "https://www.instagram.com/thejackpitts",
-        "https://www.tiktok.com/@thejackpitts"
+        "https://thejackpitts.substack.com/"
       ],
       "email": "mailto:jack@saltcreekadvisory.com",
-      "description": "Jack Pitts co-founded Salt Creek Advisory with his brother, Connor Pitts. The firm represents owners of family- and founder-owned lower-middle-market businesses selling their companies. He hosts The Making Of Hosted by Jack Pitts and Lower Middle Market Brief, and founded HelmIQ.",
+      "description": "Jack Pitts co-founded Salt Creek Advisory with his brother, Connor Pitts. The firm represents owners of family- and founder-owned lower-middle-market businesses selling their companies. He hosts The Making Of Hosted by Jack Pitts and Lower Middle Market Brief, and built HelmIQ, the deal CRM the firm runs on.",
       "knowsAbout": [
         "Sell-side M&A",
         "Lower middle market",
@@ -111,18 +123,24 @@
       "sameAs": [
         "https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH",
         "https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144",
-        "https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg"
-      ]
+        "https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg",
+        "https://www.instagram.com/themakingofhostedbyjackpitts"
+      ],
+      "image": "https://thejackpitts.com/assets/tmo-logo.webp"
     },
     {
       "@type": "PodcastSeries",
       "@id": "https://thejackpitts.com/#lower-middle-market-brief",
       "name": "Lower Middle Market Brief",
-      "url": "https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572",
+      "url": "https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4",
       "webFeed": "https://api.riverside.com/hosting/SCQy5vMa.rss",
       "author": {
         "@id": "https://thejackpitts.com/#jack"
-      }
+      },
+      "sameAs": [
+        "https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572"
+      ],
+      "image": "https://thejackpitts.com/assets/lmmb-logo.webp"
     }
   ]
 }
@@ -250,20 +268,22 @@
   .page.active .rise.d5{animation-delay:.44s}
   .page.active .rise.d6{animation-delay:.54s}
 
+  h1.eyebrow{font-weight:600}
+  @media(max-width:560px){h1.eyebrow{letter-spacing:.14em;flex-wrap:wrap}h1.eyebrow::after{display:none}}
   .eyebrow{
     font-family:var(--mono);font-weight:600;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
     color:var(--peri);margin-bottom:30px;display:flex;align-items:center;gap:16px;
   }
   .eyebrow::after{content:"";width:54px;height:1px;background:currentColor;opacity:.5}
   body[data-theme="show"] .eyebrow{color:var(--orange)}
-  h1,h2.display{
+  .hero-line,h2.display{
     font-family:var(--serif);font-weight:400;
     font-size:clamp(2.3rem,5.4vw,4.25rem);
     line-height:1.08;letter-spacing:-.01em;max-width:15em;
   }
-  h1 b,h2.display b{font-weight:700}
-  h1 em,h2.display em{font-style:normal;font-weight:400;color:var(--peri)}
-  body[data-theme="show"] h1 em, body[data-theme="show"] h2.display em{color:var(--orange)}
+  .hero-line b,h2.display b{font-weight:700}
+  .hero-line em,h2.display em{font-style:normal;font-weight:400;color:var(--peri)}
+  body[data-theme="show"] .hero-line em, body[data-theme="show"] h2.display em{color:var(--orange)}
   .prose{font-size:1.04rem;max-width:39em;opacity:.8}
   .prose+.prose{margin-top:16px}
   .prose strong{opacity:1;font-weight:600}
@@ -365,11 +385,13 @@
   .page.active .stop:nth-child(3)::before{animation-delay:.95s}
   .page.active .stop:nth-child(4)::before{animation-delay:1.2s}
   .page.active .stop:nth-child(5)::before{animation-delay:1.45s}
+  .page.active .stop:nth-child(6)::before{animation-delay:1.7s}
   @keyframes pop{to{transform:scale(1)}}
   .stop .when{font-family:var(--mono);font-weight:600;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--peri)}
   .stop h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;margin:8px 0 8px;letter-spacing:-.01em}
   .stop h3 em{font-style:normal;font-weight:400}
   .stop p{font-size:.99rem;color:var(--ink-soft);max-width:36em}
+  .stop p+p{margin-top:12px}
   .stop.here::before{background:var(--peri)}
 
   .skyline{margin-top:80px;display:flex;align-items:flex-end;gap:6px;height:110px;opacity:.9}
@@ -468,6 +490,15 @@
   .list-more{margin-top:16px;font-size:.9rem}
   .list-more a{color:var(--peri-ink);text-underline-offset:3px}
 
+  /* press kit */
+  .press{margin-top:64px;display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:start;border-top:1px solid rgba(244,241,234,.16);padding-top:44px}
+  .press h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.4rem,2.6vw,1.8rem);margin:12px 0 14px}
+  .press-bio{font-size:1rem;opacity:.82;max-width:38em}
+  .press-side{display:flex;flex-direction:column;gap:12px}
+  .press-side img{width:132px;height:auto;border:1px solid rgba(244,241,234,.2)}
+  .press-side .btn{text-align:center}
+  @media(max-width:760px){.press{grid-template-columns:1fr}}
+
   /* newsletter */
   .news{
     margin-top:74px;border:1px solid rgba(244,241,234,.2);
@@ -476,7 +507,7 @@
   }
   .news::before{content:"";position:absolute;top:-1px;left:-1px;width:30px;height:30px;border-top:3px solid var(--peri);border-left:3px solid var(--peri)}
   .news::after{content:"";position:absolute;bottom:-1px;right:-1px;width:30px;height:30px;border-bottom:3px solid var(--peri);border-right:3px solid var(--peri)}
-  .news .n-label{font-family:var(--mono);font-weight:600;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--peri)}
+  .news .n-label,.press .n-label{font-family:var(--mono);font-weight:600;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--peri)}
   .news h3{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);margin:12px 0 12px;line-height:1.15}
   .news h3 em{font-style:normal;font-weight:400;color:var(--peri)}
   .news p{font-size:.97rem;opacity:.75;max-width:34em}
@@ -524,16 +555,17 @@
 
   /* ================= READABILITY + ACCESS ================= */
   body[data-theme="home"] .eyebrow,body[data-theme="home"] .tab .no,body[data-theme="home"] .cc .cc-no,
-  body[data-theme="home"] .stop .when,body[data-theme="home"] h1 em,body[data-theme="home"] h2.display em,
+  body[data-theme="home"] .stop .when,body[data-theme="home"] .hero-line em,body[data-theme="home"] h2.display em,
   body[data-theme="home"] .brand i,body[data-theme="home"] .marquee b{color:var(--peri-ink)}
   body[data-theme="show"] .eyebrow,body[data-theme="show"] .tab .no,body[data-theme="show"] .listen .pl-go,
   body[data-theme="show"] h2.display em,body[data-theme="show"] .brand i{color:var(--orange-ink)}
   body[data-theme="firm"] .eyebrow,body[data-theme="firm"] .pullq small,body[data-theme="firm"] .steps li::before,body[data-theme="firm"] .tab .no{color:#9aa9ee}
-  h1,h2.display,.stop h3,.news h3,.cc h2,.show-card h3{text-wrap:balance}
+  .hero-line,h2.display,.stop h3,.news h3,.cc h2,.show-card h3{text-wrap:balance}
   .prose,.stop p,.cc p,.show-card p,.news p,.steps li{text-wrap:pretty}
   a:focus-visible,button:focus-visible{outline:2px solid var(--peri);outline-offset:3px}
   body[data-theme="show"] a:focus-visible,body[data-theme="show"] button:focus-visible{outline-color:var(--orange)}
-  .page h1:focus,.page h2.display:focus{outline:none}
+  .page h1:focus,.page .hero-line:focus,.page h2.display:focus{outline:none}
+  .nowrap{white-space:nowrap}
   .skip{position:absolute;left:12px;top:-60px;z-index:400;background:var(--ink);color:var(--paper);padding:10px 16px;font-family:var(--mono);font-weight:600;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
   .skip:focus{top:12px}
   @media(max-width:560px){
@@ -560,14 +592,14 @@
   <div class="nav-top">
     <a class="brand" href="/" data-go="home">Jack Pitts<i>.</i></a>
     <div style="display:flex;align-items:center;gap:14px">
-      <a class="book-mini" href="/blog/">Blog</a>
+      <a class="book-mini" href="https://thejackpitts.substack.com/" target="_blank" rel="noopener">Substack</a>
       <a class="book-mini" href="#/contact" data-go="contact">Contact</a>
     </div>
   </div>
   <div class="tabs" aria-label="Chapters">
     <a class="tab active" href="/" data-go="home" aria-current="page"><span class="no">00</span>Prologue</a>
-    <a class="tab" href="#/firm" data-go="firm"><span class="no">01</span>Salt Creek Advisory</a>
-    <a class="tab" href="#/road" data-go="road"><span class="no">02</span>The Road</a>
+    <a class="tab" href="#/road" data-go="road"><span class="no">01</span>The Road</a>
+    <a class="tab" href="#/firm" data-go="firm"><span class="no">02</span>Salt Creek Advisory</a>
     <a class="tab" href="#/show" data-go="show"><span class="no">03</span>Podcasts</a>
     <a class="tab" href="#/writing" data-go="writing"><span class="no">04</span>Writing</a>
     <a class="tab" href="#/machine" data-go="machine"><span class="no">05</span>HelmIQ</a>
@@ -582,39 +614,39 @@
   <div class="wrap">
     <div class="home-grid">
       <div>
-        <p class="eyebrow rise">Prologue · Jack Pitts</p>
-        <h1 class="rise d1" id="h-home">Every company has a <em>making of.</em><br>Here's mine, so far.</h1>
-        <p class="prose rise d2" style="margin-top:34px">I run <strong>Salt Creek Advisory</strong> with my brother, Connor. We advise owners of family- and founder-owned businesses in the lower middle market on selling their companies. We only represent sellers.</p>
-        <p class="prose rise d3">I grew up in the Chicago suburbs, went to Vanderbilt, worked in New York, and moved back to Chicago. I also host two podcasts, write on Substack, and build HelmIQ, the software we use to run our deals.</p>
+        <h1 class="eyebrow rise" id="h-home">Jack Pitts · Co-Founder, Salt Creek Advisory</h1>
+        <p class="hero-line rise d1">Every company has a <em>making of.</em><br>Here's mine, so far.</p>
+        <p class="prose rise d2" style="margin-top:34px">I'm Jack. I run <strong>Salt Creek Advisory</strong> with my brother, Connor. We advise owners of family- and founder-owned businesses in the lower middle market on selling their companies, and we only represent sellers.</p>
+        <p class="prose rise d3">I grew up outside Chicago, went to Vanderbilt, spent a semester in London, worked in finance in St. Louis and New York, and came home to Chicago. I also host two podcasts and write on Substack.</p>
         <div class="ctas rise d4">
-          <a class="btn peri" href="mailto:jack@saltcreekadvisory.com">Email me: jack@saltcreekadvisory.com</a>
-          <a class="btn ghost" href="#/firm" data-go="firm">How we work with owners</a>
+          <a class="btn peri" href="#/road" data-go="road">Start with my story</a>
+          <a class="btn ghost" href="#/firm" data-go="firm">About Salt Creek Advisory</a>
         </div>
       </div>
       <a class="headshot rise d2" href="https://www.linkedin.com/in/jack-pitts" target="_blank" rel="noopener me" id="headshot">
         <div class="hi" aria-hidden="true">Hey, that's my LinkedIn ↗</div>
         <img src="assets/headshot.webp" alt="Jack Pitts" id="headshotImg" width="628" height="784" fetchpriority="high" decoding="async">
-        <div class="tag">Jack Pitts · <i>CHI → NSH → NYC → CHI</i></div>
+        <div class="tag">Jack Pitts · <i>CHI → NSH → LDN → NYC → CHI</i></div>
       </a>
     </div>
 
     <div class="marquee rise d4" aria-hidden="true">
       <div class="marquee-track">
-        <span>Salt Creek Advisory <b>●</b></span><span>Sell-side M&amp;A <b>●</b></span><span>Family- and founder-owned businesses <b>●</b></span><span>The Making Of Hosted by Jack Pitts <b>●</b></span><span>Lower Middle Market Brief <b>●</b></span><span>Writing on Substack <b>●</b></span><span>HelmIQ <b>●</b></span><span>Chicago <b>●</b></span>
-        <span>Salt Creek Advisory <b>●</b></span><span>Sell-side M&amp;A <b>●</b></span><span>Family- and founder-owned businesses <b>●</b></span><span>The Making Of Hosted by Jack Pitts <b>●</b></span><span>Lower Middle Market Brief <b>●</b></span><span>Writing on Substack <b>●</b></span><span>HelmIQ <b>●</b></span><span>Chicago <b>●</b></span>
+        <span>Salt Creek Advisory <b>●</b></span><span>Sell-side M&amp;A <b>●</b></span><span>Family- and founder-owned businesses <b>●</b></span><span>The Making Of Hosted by Jack Pitts <b>●</b></span><span>Lower Middle Market Brief <b>●</b></span><span>Writing on Substack <b>●</b></span><span>Harvey the dachshund, firm mascot <b>●</b></span><span>Chicago <b>●</b></span>
+        <span>Salt Creek Advisory <b>●</b></span><span>Sell-side M&amp;A <b>●</b></span><span>Family- and founder-owned businesses <b>●</b></span><span>The Making Of Hosted by Jack Pitts <b>●</b></span><span>Lower Middle Market Brief <b>●</b></span><span>Writing on Substack <b>●</b></span><span>Harvey the dachshund, firm mascot <b>●</b></span><span>Chicago <b>●</b></span>
       </div>
     </div>
 
     <div class="chapter-cards rise d5">
-      <a class="cc" href="#/firm" data-go="firm">
+      <a class="cc" href="#/road" data-go="road">
         <div class="cc-no">Chapter 01</div>
+        <h2>The Road</h2>
+        <p>Chicago, Nashville, London, St. Louis, New York, and back to Chicago.</p>
+      </a>
+      <a class="cc" href="#/firm" data-go="firm">
+        <div class="cc-no">Chapter 02</div>
         <h2>Salt Creek Advisory</h2>
         <p>The sell-side M&amp;A firm I run with my brother, Connor.</p>
-      </a>
-      <a class="cc" href="#/road" data-go="road">
-        <div class="cc-no">Chapter 02</div>
-        <h2>The Road</h2>
-        <p>Chicago to Nashville to London to New York, and back to Chicago.</p>
       </a>
       <a class="cc" href="#/show" data-go="show">
         <div class="cc-no">Chapter 03</div>
@@ -624,16 +656,64 @@
       <a class="cc" href="#/writing" data-go="writing">
         <div class="cc-no">Chapter 04</div>
         <h2>Writing</h2>
-        <p>What I'm learning, on Substack and here on the blog.</p>
+        <p>Personal posts on Substack about what I'm learning.</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ================= 01 FIRM ================= -->
+<!-- ================= 01 THE ROAD ================= -->
+<section class="page" id="pg-road" aria-labelledby="h-road">
+  <div class="wrap">
+    <p class="eyebrow rise">Chapter 01 · The Road</p>
+    <h2 class="display rise d1" id="h-road">Chicago, Nashville, London, St. Louis, New York, <em>and back to Chicago.</em></h2>
+    <div class="timeline rise d2">
+      <div class="stop">
+        <div class="when">Chicago · Growing up</div>
+        <h3>Grew up here.</h3>
+        <p>I grew up in the Chicago suburbs playing football and basketball. My brother, Connor, is two years older than me. Running and being outside is still how I clear my head. Our family has two dogs: Addie, a pitbull-boxer mix, and Harvey, a dachshund who ended up as Salt Creek Advisory's mascot.</p>
+      </div>
+      <div class="stop">
+        <div class="when">Nashville · Vanderbilt · Class of 2025</div>
+        <h3>Vanderbilt.</h3>
+        <p>I graduated cum laude with a degree in Human and Organizational Development and a minor in business. The people I met there taught me as much as the classes did. I also started a nonprofit called Trash Troopers. It's what it sounds like, and I'm still proud of it.</p>
+      </div>
+      <div class="stop">
+        <div class="when">London · Fall 2023</div>
+        <h3>A semester <em>abroad.</em></h3>
+        <p>I spent the fall of my junior year in London and liked it more than I expected. Nobody there had known me for more than a few weeks, which pushed me to get out and meet people. I still look for reasons to go back.</p>
+      </div>
+      <div class="stop">
+        <div class="when">St. Louis · 2024</div>
+        <h3>Investment banking.</h3>
+        <p>I worked in investment banking at ButcherJoseph &amp; Co. in St. Louis. It was my first real look at how a company actually gets sold.</p>
+      </div>
+      <div class="stop">
+        <div class="when">New York · 2025</div>
+        <h3>Private equity <em>deal origination.</em></h3>
+        <p>After Vanderbilt I moved to New York and worked in business development and deal origination at private equity firms, including Blue Wolf Capital and Kingfish Capital. I lived on the Lower East Side and liked the city more than I expected to.</p>
+        <p>That work put me in a lot of conversations with business owners. Many had spent decades building their companies, and selling was one of the biggest decisions they would ever make. I wanted to work for those owners directly.</p>
+      </div>
+      <div class="stop here">
+        <div class="when">Chicago · Now</div>
+        <h3>Back home.</h3>
+        <p>So I came home to Chicago and started Salt Creek Advisory. Connor joined full-time in September 2026, and the two of us run it together. I also host two podcasts and write on Substack.</p>
+        <p>I'm working to build a real community of business owners and dealmakers here in Chicago. If you're part of it, or want to be, reach out.</p>
+      </div>
+    </div>
+    <div class="skyline rise d4" aria-hidden="true">
+      <i style="height:34%;animation-delay:.05s"></i><i style="height:58%;animation-delay:.1s"></i><i style="height:42%;animation-delay:.15s"></i><i style="height:88%;animation-delay:.2s"></i><i style="height:64%;animation-delay:.25s"></i><i style="height:100%;animation-delay:.3s"></i><i style="height:52%;animation-delay:.35s"></i><i style="height:76%;animation-delay:.4s"></i><i style="height:40%;animation-delay:.45s"></i><i style="height:94%;animation-delay:.5s"></i><i style="height:60%;animation-delay:.55s"></i><i style="height:30%;animation-delay:.6s"></i><i style="height:70%;animation-delay:.65s"></i><i style="height:46%;animation-delay:.7s"></i><i style="height:82%;animation-delay:.75s"></i><i style="height:36%;animation-delay:.8s"></i>
+    </div>
+    <div class="ctas rise d5">
+      <a class="btn" href="#/firm" data-go="firm">Next chapter: Salt Creek Advisory →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 FIRM ================= -->
 <section class="page" id="pg-firm" aria-labelledby="h-firm">
   <div class="wrap">
-    <p class="eyebrow rise">Chapter 01 · Salt Creek Advisory · Chicago</p>
+    <p class="eyebrow rise">Chapter 02 · Salt Creek Advisory · Chicago</p>
     <h2 class="display rise d1" id="h-firm">We help owners <em>sell their businesses.</em></h2>
     <div class="ch-grid">
       <div>
@@ -672,50 +752,7 @@
       </div>
     </div>
     <div class="ctas rise d5">
-      <a class="btn ghost" href="#/road" data-go="road">Next chapter: the road →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 02 THE ROAD ================= -->
-<section class="page" id="pg-road" aria-labelledby="h-road">
-  <div class="wrap">
-    <p class="eyebrow rise">Chapter 02 · The Road</p>
-    <h2 class="display rise d1" id="h-road">Chicago, Nashville, London, New York, <em>and back to Chicago.</em></h2>
-    <div class="timeline rise d2">
-      <div class="stop">
-        <div class="when">Chicago · The Start</div>
-        <h3>Grew up here.</h3>
-        <p>I grew up in the Chicago suburbs playing football and basketball. My brother, Connor, is two years older than me. Running and being outside is still how I clear my head. Our family has two dogs: Addie, a pitbull-boxer mix, and Harvey, a dachshund who ended up as Salt Creek Advisory's mascot.</p>
-      </div>
-      <div class="stop">
-        <div class="when">Nashville · Vanderbilt</div>
-        <h3>Vanderbilt, <em>class of 2025.</em></h3>
-        <p>I graduated cum laude with a degree in Human and Organizational Development and a minor in business. The people I met there taught me as much as the classes did. I also started a nonprofit called Trash Troopers. It's what it sounds like, and I'm still proud of it.</p>
-      </div>
-      <div class="stop">
-        <div class="when">London · A Semester</div>
-        <h3>Studied abroad in London.</h3>
-        <p>I spent a semester in London during college and liked it more than I expected. Nobody there had known me for more than a few weeks, which pushed me to get out and meet people. I still look for reasons to go back.</p>
-      </div>
-      <div class="stop">
-        <div class="when">St. Louis · New York · Finance</div>
-        <h3>Banking, then <em>private equity deal origination.</em></h3>
-        <p>In 2024 I worked in investment banking at ButcherJoseph &amp; Co. in St. Louis. After that I worked in business development and deal origination at private equity firms in New York, including Blue Wolf Capital and Kingfish Capital. I lived on the Lower East Side and liked New York more than I expected to.</p>
-        <p>That work put me in a lot of conversations with business owners. Many had spent decades building their companies, and selling was one of the biggest decisions they would ever make. I wanted to work for those owners directly. That's a big part of why Salt Creek Advisory exists.</p>
-      </div>
-      <div class="stop here">
-        <div class="when">Chicago · Now</div>
-        <h3>Back home.</h3>
-        <p>Now I live in Chicago. Most of my time goes to Salt Creek Advisory and the owners we work with. I also host two podcasts, write on Substack, and keep building HelmIQ.</p>
-        <p>I'm also working to build a real community of business owners and dealmakers here in Chicago. If you're part of it, or want to be, email me.</p>
-      </div>
-    </div>
-    <div class="skyline rise d4" aria-hidden="true">
-      <i style="height:34%;animation-delay:.05s"></i><i style="height:58%;animation-delay:.1s"></i><i style="height:42%;animation-delay:.15s"></i><i style="height:88%;animation-delay:.2s"></i><i style="height:64%;animation-delay:.25s"></i><i style="height:100%;animation-delay:.3s"></i><i style="height:52%;animation-delay:.35s"></i><i style="height:76%;animation-delay:.4s"></i><i style="height:40%;animation-delay:.45s"></i><i style="height:94%;animation-delay:.5s"></i><i style="height:60%;animation-delay:.55s"></i><i style="height:30%;animation-delay:.6s"></i><i style="height:70%;animation-delay:.65s"></i><i style="height:46%;animation-delay:.7s"></i><i style="height:82%;animation-delay:.75s"></i><i style="height:36%;animation-delay:.8s"></i>
-    </div>
-    <div class="ctas rise d5">
-      <a class="btn" href="#/show" data-go="show">Next chapter: the podcasts →</a>
+      <a class="btn ghost" href="#/show" data-go="show">Next chapter: the podcasts →</a>
     </div>
   </div>
 </section>
@@ -741,11 +778,12 @@
           <li><a href="https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH" target="_blank" rel="noopener"><span class="pl-name">The Making Of on Spotify</span><span class="pl-go">Listen →</span></a></li>
           <li><a href="https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144" target="_blank" rel="noopener"><span class="pl-name">The Making Of on Apple Podcasts</span><span class="pl-go">Listen →</span></a></li>
           <li><a href="https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg" target="_blank" rel="noopener"><span class="pl-name">The Making Of on YouTube</span><span class="pl-go">Watch →</span></a></li>
+          <li><a href="https://www.instagram.com/themakingofhostedbyjackpitts" target="_blank" rel="noopener"><span class="pl-name">The Making Of on Instagram</span><span class="pl-go">Follow →</span></a></li>
         </ul>
       </article>
       <article class="show-card rise d3" aria-labelledby="h-lmmb">
         <div class="sc-head">
-          <div class="sc-mark" aria-hidden="true">LMMB</div>
+          <img src="assets/lmmb-logo.webp" alt="" width="480" height="480" loading="lazy" decoding="async">
           <div>
             <div class="sc-label">Short-form brief</div>
             <h3 id="h-lmmb">Lower Middle Market Brief</h3>
@@ -753,6 +791,7 @@
         </div>
         <p>My newer show. It's a short podcast about lower-middle-market deals, what's happening in the market, and the people working in the industry. Episodes run about 10 to 15 minutes.</p>
         <ul class="listen">
+          <li><a href="https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4" target="_blank" rel="noopener"><span class="pl-name">Lower Middle Market Brief on Spotify</span><span class="pl-go">Listen →</span></a></li>
           <li><a href="https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572" target="_blank" rel="noopener"><span class="pl-name">Lower Middle Market Brief on Apple Podcasts</span><span class="pl-go">Listen →</span></a></li>
         </ul>
       </article>
@@ -773,11 +812,10 @@
     <div class="ch-grid">
       <div>
         <p class="prose rise d2">My Substack is the most personal thing I write. Most posts come out of whatever week I just had, like feeling out of place at my first M&amp;A conference, a trip to Mexico City, or being stressed while life is honestly pretty good. It isn't deal analysis.</p>
-        <p class="prose rise d3">The blog on this site is different. It has a few longer pieces about who I am, why we started Salt Creek Advisory, and how AI fits into dealmaking.</p>
+        <p class="prose rise d3">It's free. If you want to follow along, subscribing is the easiest way.</p>
         <div class="ctas rise d4">
           <a class="btn" href="https://thejackpitts.substack.com/" target="_blank" rel="noopener">Read on Substack</a>
           <a class="btn ghost" href="https://thejackpitts.substack.com/subscribe" target="_blank" rel="noopener">Subscribe on Substack</a>
-          <a class="btn ghost" href="/blog/">Read the blog</a>
         </div>
       </div>
       <div class="rise d3">
@@ -805,22 +843,22 @@
     <h2 class="display rise d1" id="h-machine">Why we built <em>HelmIQ.</em></h2>
     <div class="ch-grid">
       <div>
-        <p class="prose rise d2">Running a sale means keeping track of a lot: which buyers we've talked to, what each one said, and what needs to happen next. That information belongs to our clients and to us. We wanted to own it and keep it on our own system, instead of handing it to someone else's platform.</p>
-        <p class="prose rise d3">So I built HelmIQ. It's a CRM for investment banking and private equity teams. It logs meetings, writes deal briefs, and drafts follow-ups. We run Salt Creek's deals on it, and I'm still working on it every day.</p>
+        <p class="prose rise d2">Running a sale means keeping track of a lot: which buyers we've talked to, what each one said, and what needs to happen next. That information belongs to our clients and to us. We wanted to own it, not hand it to someone else's platform.</p>
+        <p class="prose rise d3">So I built HelmIQ myself, using Claude Code. We run Salt Creek's deals on it, and a few other firms license it from us. I'm not out selling it. It's mostly a tool we built for ourselves, and I still work on it every day.</p>
         <div class="ctas rise d4">
           <a class="btn ghost" href="https://helmiq.net" target="_blank" rel="noopener">Learn more at helmiq.net</a>
         </div>
       </div>
       <div>
         <div class="logo-card rise d2">
-          <a href="https://helmiq.net" target="_blank" rel="noopener"><img src="assets/helmiq-wordmark-dark.webp" alt="HelmIQ" style="max-width:300px" width="924" height="540" loading="lazy" decoding="async"></a>
+          <a href="https://helmiq.net" target="_blank" rel="noopener"><img src="assets/helmiq-logo-2026.webp" alt="HelmIQ" style="max-width:220px;border-radius:22px" width="400" height="400" loading="lazy" decoding="async"></a>
           <a class="visit" href="https://helmiq.net" target="_blank" rel="noopener">helmiq.net ↗</a>
         </div>
         <ul class="facts rise d3">
-          <li><span class="k">What</span><span class="v">A CRM for investment banking and private equity teams</span></li>
-          <li><span class="k">My role</span><span class="v">Founder and CEO</span></li>
+          <li><span class="k">What</span><span class="v">The deal CRM we built for Salt Creek</span></li>
+          <li><span class="k">Built with</span><span class="v">Claude Code</span></li>
           <li><span class="k">Why</span><span class="v">So we own our data</span></li>
-          <li><span class="k">Used on</span><span class="v">Salt Creek Advisory's own deals</span></li>
+          <li><span class="k">Today</span><span class="v">Used daily, licensed to a few firms</span></li>
         </ul>
       </div>
     </div>
@@ -840,8 +878,20 @@
       <a href="https://saltcreekadvisory.com/book-a-call" target="_blank" rel="noopener"><div class="em-l">Selling a business</div><div class="em-v">Owners: book a call ↗</div><div class="em-d">If you own a business and are thinking about a sale, you can book time with Connor or me on the firm's website.</div></a>
       <a href="https://themakingofhostedbyjackpitts.com/#guests" target="_blank" rel="noopener"><div class="em-l">Podcast guests</div><div class="em-v">See the guest page ↗</div><div class="em-d">What I look for in guests on The Making Of, and how to reach out.</div></a>
       <a href="https://saltcreekadvisory.com" target="_blank" rel="noopener"><div class="em-l">The firm</div><div class="em-v">saltcreekadvisory.com ↗</div><div class="em-d">How Salt Creek Advisory works with owners, plus guides and resources.</div></a>
-      <a href="https://www.linkedin.com/in/jack-pitts" target="_blank" rel="noopener me"><div class="em-l">Connect</div><div class="em-v">LinkedIn ↗</div><div class="em-d">Follow along or send a note.</div></a>
+      <a href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener me"><div class="em-l">Follow along</div><div class="em-v">@thejackpitts ↗</div><div class="em-d">My personal Instagram. The firm is <span class="nowrap">@saltcreekadvisory</span> and the show is <span class="nowrap">@themakingofhostedbyjackpitts</span>.</div></a>
     </div>
+    <section class="press rise d4" aria-labelledby="h-press">
+      <div>
+        <div class="n-label">For hosts, press, and event organizers</div>
+        <h3 id="h-press">Short bio</h3>
+        <p class="press-bio">Jack Pitts is co-founder and principal of Salt Creek Advisory, a family-owned, Chicago-based investment bank he runs with his brother, Connor. The firm represents owners of family- and founder-owned businesses in the lower middle market when they sell their companies. Jack hosts two podcasts, The Making Of Hosted by Jack Pitts and Lower Middle Market Brief, and writes on Substack. He built HelmIQ, the deal CRM the firm runs on. Before Salt Creek, he worked in investment banking at ButcherJoseph &amp; Co. and in private equity deal origination in New York. He graduated cum laude from Vanderbilt University.</p>
+      </div>
+      <div class="press-side">
+        <img src="assets/headshot.webp" alt="" width="628" height="784" loading="lazy" decoding="async">
+        <a class="btn ghost" href="/assets/headshot.jpg" download="jack-pitts-headshot.jpg">Download headshot</a>
+        <a class="btn ghost" href="mailto:jack@saltcreekadvisory.com?subject=Interview%20or%20speaking%20request">Interview or speaking request</a>
+      </div>
+    </section>
     <div class="news rise d4">
       <div>
         <div class="n-label">Writing · Substack</div>
@@ -855,18 +905,18 @@
     </div>
     <nav class="index-links rise d5" aria-label="All links">
       <a href="https://saltcreekadvisory.com" target="_blank" rel="noopener">saltcreekadvisory.com</a>
+      <a href="https://www.linkedin.com/in/jack-pitts" target="_blank" rel="noopener me">LinkedIn</a>
+      <a href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener me">Instagram · Jack</a>
+      <a href="https://www.instagram.com/saltcreekadvisory" target="_blank" rel="noopener">Instagram · Salt Creek Advisory</a>
+      <a href="https://thejackpitts.substack.com/" target="_blank" rel="noopener">Substack</a>
       <a href="https://themakingofhostedbyjackpitts.com" target="_blank" rel="noopener">The Making Of · Website</a>
       <a href="https://open.spotify.com/show/4vUJmF28QI4N7WViFmFofH" target="_blank" rel="noopener">The Making Of · Spotify</a>
       <a href="https://podcasts.apple.com/us/podcast/the-making-of-hosted-by-jack-pitts/id1853933144" target="_blank" rel="noopener">The Making Of · Apple Podcasts</a>
       <a href="https://www.youtube.com/channel/UC0Oo8G_-OHHekbC5kpyIRBg" target="_blank" rel="noopener">The Making Of · YouTube</a>
       <a href="https://www.instagram.com/themakingofhostedbyjackpitts" target="_blank" rel="noopener">The Making Of · Instagram</a>
+      <a href="https://open.spotify.com/show/0346Msd0zGSseN8XNyDzc4" target="_blank" rel="noopener">Lower Middle Market Brief · Spotify</a>
       <a href="https://podcasts.apple.com/us/podcast/lower-middle-market-brief/id6801373572" target="_blank" rel="noopener">Lower Middle Market Brief · Apple Podcasts</a>
-      <a href="https://thejackpitts.substack.com/" target="_blank" rel="noopener">Substack</a>
-      <a href="/blog/">Blog</a>
       <a href="https://helmiq.net" target="_blank" rel="noopener">helmiq.net</a>
-      <a href="https://www.linkedin.com/in/jack-pitts" target="_blank" rel="noopener me">LinkedIn</a>
-      <a href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener me">Instagram</a>
-      <a href="https://www.tiktok.com/@thejackpitts" target="_blank" rel="noopener me">TikTok</a>
     </nav>
   </div>
 </section>
@@ -878,112 +928,12 @@
 <footer>
   <div class="wrap foot-inner">
     <span>© <span id="yr"></span> Jack Pitts · Chicago · <a href="/privacy.html">Privacy</a> · <a href="/disclosures.html">Disclosures</a></span>
-    <span><a href="https://saltcreekadvisory.com" target="_blank" rel="noopener">Salt Creek Advisory</a> · <a href="#/show" data-go="show">Podcasts</a> · <a href="https://thejackpitts.substack.com/" target="_blank" rel="noopener">Substack</a> · <a href="/blog/">Blog</a> · <a href="#/contact" data-go="contact">Contact</a></span>
-    <span>CHI → NSH → NYC → CHI</span>
+    <span><a href="https://saltcreekadvisory.com" target="_blank" rel="noopener">Salt Creek Advisory</a> · <a href="#/show" data-go="show">Podcasts</a> · <a href="https://thejackpitts.substack.com/" target="_blank" rel="noopener">Substack</a> · <a href="https://www.instagram.com/thejackpitts" target="_blank" rel="noopener me">Instagram</a> · <a href="#/contact" data-go="contact">Contact</a></span>
+    <span>CHI → NSH → LDN → NYC → CHI</span>
   </div>
 </footer>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  const DEFAULT_TITLE = document.title;
-  const THEMES = {
-    home:    { theme:'home',    label:'Prologue',   title:'Jack Pitts' },
-    firm:    { theme:'firm',    label:'Chapter 01', title:'Salt Creek Advisory', docTitle:'Salt Creek Advisory · Jack Pitts' },
-    road:    { theme:'home',    label:'Chapter 02', title:'The Road', docTitle:'The Road · Jack Pitts' },
-    show:    { theme:'show',    label:'Chapter 03', title:'Podcasts', docTitle:'Podcasts · Jack Pitts' },
-    writing: { theme:'home',    label:'Chapter 04', title:'Writing', docTitle:'Writing · Jack Pitts' },
-    machine: { theme:'machine', label:'Chapter 05', title:'HelmIQ', docTitle:'HelmIQ · Jack Pitts' },
-    contact: { theme:'contact', label:'Epilogue',   title:'Contact', docTitle:'Contact · Jack Pitts' }
-  };
-
-  const ORDER = ['home', 'firm', 'road', 'show', 'writing', 'machine', 'contact'];
-  let current = 'home';
-  const wipe = document.getElementById('wipe');
-  const wipeLabel = document.getElementById('wipeLabel');
-  const wipeTitle = document.getElementById('wipeTitle');
-  let busy = false;
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-
-  function focusHeading(pg) {
-    const h = pg.querySelector('h1, h2.display');
-    if (!h) return;
-    h.setAttribute('tabindex', '-1');
-    h.focus({ preventScroll: true });
-  }
-
-  function show(key, animate = true, push = true, focus = true) {
-    const cfg = THEMES[key];
-    if (!cfg || busy) return;
-    if (reduceMotion.matches) animate = false;
-    const swap = () => {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      const pg = document.getElementById('pg-' + key);
-      pg.querySelectorAll('.rise').forEach(el => { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; });
-      pg.querySelectorAll('.skyline i, .stop, .timeline').forEach(el => { el.style.animationName = 'none'; void el.offsetWidth; el.style.animationName = ''; });
-      pg.classList.add('active');
-      document.body.dataset.theme = cfg.theme;
-      document.querySelectorAll('.tab').forEach(t => {
-        const isActive = t.dataset.go === key;
-        t.classList.toggle('active', isActive);
-        if (isActive) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
-      });
-      const i = ORDER.indexOf(key);
-      document.getElementById('counterNum').textContent = String(i).padStart(2, '0') + ' / ' + String(ORDER.length - 1).padStart(2, '0');
-      document.title = cfg.docTitle || DEFAULT_TITLE;
-      current = key;
-      scrollTo(0, 0);
-      if (push) history.replaceState(null, '', key === 'home' ? location.pathname : '#/' + key);
-      if (focus) focusHeading(pg);
-    };
-    if (!animate) { swap(); return; }
-    busy = true;
-    wipeLabel.textContent = cfg.label;
-    wipeTitle.textContent = cfg.title;
-    wipe.classList.remove('go'); void wipe.offsetWidth;
-    wipe.classList.add('go');
-    setTimeout(swap, 460);
-    setTimeout(() => { busy = false; wipe.classList.remove('go'); }, 1050);
-  }
-
-  document.querySelectorAll('[data-go]').forEach(el =>
-    el.addEventListener('click', e => {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
-      e.preventDefault();
-      if (el.dataset.go === current) { focusHeading(document.getElementById('pg-' + current)); return; }
-      show(el.dataset.go);
-    }));
-
-  addEventListener('hashchange', () => {
-    const key = location.hash.replace('#/', '') || 'home';
-    if (THEMES[key] && key !== current) show(key);
-  });
-
-  const initial = location.hash.replace('#/', '');
-  if (THEMES[initial] && initial !== 'home') show(initial, false, true, false);
-
-  // arrow keys flip chapters
-  addEventListener('keydown', e => {
-    if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
-    if (e.target.matches('input, textarea, select, [contenteditable]')) return;
-    const i = ORDER.indexOf(current);
-    if (e.key === 'ArrowRight' && i < ORDER.length - 1) show(ORDER[i + 1]);
-    if (e.key === 'ArrowLeft' && i > 0) show(ORDER[i - 1]);
-  });
-
-  // 3D tilt on the headshot
-  const hs = document.getElementById('headshot');
-  const hsImg = document.getElementById('headshotImg');
-  if (hs && matchMedia('(hover:hover)').matches) {
-    hs.addEventListener('mousemove', e => {
-      const r = hs.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - .5;
-      const y = (e.clientY - r.top) / r.height - .5;
-      hsImg.style.transform = 'rotateY(' + (x * 9) + 'deg) rotateX(' + (-y * 9) + 'deg) scale(1.02)';
-    });
-    hs.addEventListener('mouseleave', () => { hsImg.style.transform = ''; });
-  }
-</script>
+<script src="/assets/home.js"></script>
 
 </body>
 </html>
