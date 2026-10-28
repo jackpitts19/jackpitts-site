@@ -4,8 +4,8 @@ Personal website for Jack Pitts: Salt Creek Advisory first, then his story, two 
 
 ## Structure
 
-- `index.html` is the homepage. Seven chapters (`#/firm`, `#/road`, `#/show`, `#/writing`, `#/machine`, `#/contact`), inline CSS and JS, no build step. All chapter text is in the HTML, so it works without JavaScript.
-- `blog/` holds the longer original articles. Shorter personal posts live on Substack, not here.
+- `index.html` is the homepage. Seven chapters (`#/road`, `#/firm`, `#/show`, `#/writing`, `#/machine`, `#/contact`), inline CSS and JS, no build step. All chapter text is in the HTML, so it works without JavaScript.
+- `blog/` is hidden (noindex, not linked, not in the sitemap) but every post still loads at its old URL. Writing now lives on Substack.
 - `privacy.html` and `disclosures.html` are linked from every footer.
 - `assets/` holds images, `blog.css`, and the favicon.
 - `tools/` and `docs/` are internal and excluded from the deploy by `.vercelignore`.

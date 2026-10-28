@@ -53,3 +53,12 @@ The "Page with redirect" list (http://, www., /index.html, /blog/index.html) is 
 2. "Why we only represent sellers": the sell-side-only choice, in your words.
 3. Short write-ups of published podcast episodes that link to the episode on the show's site, with no copied transcripts.
 4. "What I learned working in private equity deal origination": a personal piece that ties to your background.
+
+## Round 3 (2026-10-28)
+
+- Blog hidden: not linked, `noindex, follow`, out of the sitemap. Every post still loads at its old URL (nothing deleted). Writing = Substack.
+- London is fall 2023 (fall of junior year, class of May 2025). Timeline is now in order: Chicago, Vanderbilt, London 2023, St. Louis 2024, New York 2025, Chicago now.
+- Lower Middle Market Brief: Spotify + Apple, official artwork. No website, not on YouTube.
+- HelmIQ: new logo; "built it myself with Claude Code, a few firms license it, not out selling it."
+- Socials: TikTok removed; Instagram @thejackpitts and @saltcreekadvisory.
+- New social share image: `assets/og-jack-pitts-2026.jpg` (new filename so LinkedIn and other platforms fetch the new one). After deploy, run the homepage through LinkedIn Post Inspector to refresh LinkedIn's preview.
